@@ -1,0 +1,10 @@
+Package: eiaMisc
+Type: Package
+Title: Set of miscellaneous functions
+Version: 1.0
+Date: 2013-08-08
+Author: Eric Archer
+Maintainer: Eric Archer <eric.archer@noaa.gov>
+Description: Collection of miscellaneous utility and analytical functions
+License: GNU General Public License
+Lazyload: Yes

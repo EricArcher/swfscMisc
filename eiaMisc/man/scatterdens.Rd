@@ -1,0 +1,30 @@
+\name{scatterdens}
+\alias{scatterdens}
+\alias{scatterhist}
+\title{Scatter Plot with Density Margins}
+\usage{
+scatterdens(x, y, xlab = "", ylab = "", dens.frac = 1/5, ...)
+
+scatterhist(x, y, xlab = "", ylab = "", dens.frac = 1/5, ...)
+}
+\arguments{
+  \item{x,y}{vectors of points to plot}
+
+  \item{xlab,ylab}{labels for x and y axes}
+
+  \item{dens.frac}{fraction of screen to be taken up by
+  density plots on margins}
+
+  \item{...}{Arguments to be passed to \link{plot}}
+}
+\description{
+Scatter Plot with Density Margins
+}
+\author{
+Eric Archer <eric.archer@noaa.gov>
+}
+\references{
+Original code by Ken Kleiman:
+\url{http://sas-and-r.blogspot.co.uk/2011/06/example-841-scatterplot-with-marginal.html}
+}
+

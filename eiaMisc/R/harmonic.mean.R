@@ -5,6 +5,12 @@
 #' @param x vector
 #' @return a number giving the harmonic mean of a vector
 #' @author Eric Archer <eric.archer@@noaa.gov>
+#'  
+#' @examples
+#' x <- rlnorm(100)
+#' mean(x)
+#' median(x)
+#' harmonic.mean(x)
 
 harmonic.mean <- function(x) {
   #

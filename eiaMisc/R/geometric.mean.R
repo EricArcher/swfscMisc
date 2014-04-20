@@ -5,6 +5,12 @@
 #' @param x vector
 #' @return a number giving the geometric mean of a vector
 #' @author Eric Archer <eric.archer@@noaa.gov>
+#' 
+#' @examples
+#' x <- rlnorm(100)
+#' mean(x)
+#' median(x)
+#' geometric.mean(x)
 
 geometric.mean <- function(x) {
   x <- na.omit(x)

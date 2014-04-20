@@ -3,7 +3,7 @@
 \alias{scatterhist}
 \title{Scatter Plot with Density Margins}
 \usage{
-scatterdens(x, y, xlab = "", ylab = "", dens.frac = 1/5, ...)
+scatterdens(x, y, dens.frac = 1/5, ...)
 
 scatterhist(x, y, xlab = "", ylab = "", dens.frac = 1/5, ...)
 }
@@ -19,6 +19,13 @@ scatterhist(x, y, xlab = "", ylab = "", dens.frac = 1/5, ...)
 }
 \description{
 Scatter Plot with Density Margins
+}
+\examples{
+x <- rnorm(100)
+y <- rlnorm(100)
+op <- par(ask = TRUE)
+scatterdens(x, y, xlab = "x", ylab = "y")
+par(op)
 }
 \author{
 Eric Archer <eric.archer@noaa.gov>

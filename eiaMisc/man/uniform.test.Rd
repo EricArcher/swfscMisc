@@ -17,6 +17,12 @@ result of chi-squared test
 Tests whether a histogram is significantly different from a
 uniform distribution
 }
+\examples{
+x.unif <- runif(100)
+uniform.test(hist(x.unif), B = 1000)
+x.lnorm <- rlnorm(100)
+uniform.test(hist(x.lnorm), B = 1000)
+}
 \author{
 Eric Archer <eric.archer@noaa.gov>
 }

@@ -5,6 +5,14 @@
 #' @param x a numeric vector
 #' @return a numeric vector of the same length as x
 #' @author Eric Archer <eric.archer@@noaa.gov>
+#' 
+#' @examples
+#' x <- runif(20, 50, 110)
+#' x.norm <- normalize(x)
+#' mean(x)
+#' mean(x.norm)
+#' sd(x)
+#' sd(x.norm)
 
 normalize <- function(x) {
   if(!is.numeric(x) & !is.vector(x)) stop("'x' must be a numeric vector")

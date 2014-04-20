@@ -14,14 +14,21 @@ logOdds(x)
 odds(x)
 }
 \arguments{
-  \item{x}{a numeric vector of probabilities (0..1), odds
-  (0..Inf), or log.odds (-Inf..Inf)}
+  \item{x}{a numeric vector of probabilities (0 to 1), odds
+  (0 to Inf), or log.odds (-Inf to Inf)}
 }
 \description{
-\code{odds} converts probability to odds \cr \code{logOdds}
-converts odds to log-odds \cr \code{invOdds} converts odds
-to probability \cr \code{invLogOdds} converts log-odds to
-odds \cr
+\tabular{ll}{ \code{odds} \tab converts probability to odds
+\cr \code{logOdds} \tab converts odds to log-odds \cr
+\code{invOdds} \tab converts odds to probability \cr
+\code{invLogOdds} \tab converts log-odds to odds \cr }
+}
+\examples{
+x <- sort(runif(10))
+odds.df <- data.frame(x = x, odds = odds(x), logOdds = logOdds(x))
+odds.df
+invOdds(odds.df$odds)
+invLogOdds(odds.df$logOdds)
 }
 \author{
 Eric Archer <eric.archer@noaa.gov>

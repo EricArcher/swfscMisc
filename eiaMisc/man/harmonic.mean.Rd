@@ -13,6 +13,12 @@ a number giving the harmonic mean of a vector
 \description{
 Calculates the harmonic mean of a vector
 }
+\examples{
+x <- rlnorm(100)
+mean(x)
+median(x)
+harmonic.mean(x)
+}
 \author{
 Eric Archer <eric.archer@noaa.gov>
 }

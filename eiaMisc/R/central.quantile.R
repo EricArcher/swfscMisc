@@ -1,11 +1,15 @@
 #' @title Central quantile
-#' @aliases central.quantile
 #' @export central.quantile
 #' @description Upper and lower values of central quantile
 #' @param x numeric vector
 #' @param pct central percentile desired
 #' @return a two element vector giving the lower and upper quantiles
 #' @author Eric Archer <eric.archer@@noaa.gov>
+#' 
+#' @examples
+#' x <- runif(1000)
+#' central.quantile(x)
+#' central.quantile(x, pct = 0.75)
 
 central.quantile <- function(x, pct = 0.95) {
   if((pct < 0) | (pct > 100)) return(NA)

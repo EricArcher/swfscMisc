@@ -13,6 +13,12 @@ a number giving the geometric mean of a vector
 \description{
 Calculates the geometric mean of a vector
 }
+\examples{
+x <- rlnorm(100)
+mean(x)
+median(x)
+geometric.mean(x)
+}
 \author{
 Eric Archer <eric.archer@noaa.gov>
 }

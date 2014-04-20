@@ -1,12 +1,17 @@
 #' @name na.count
 #' @title Count NAs
-#' @aliases na.count
 #' @export na.count
 #' @description Counts NAs in an object
-#' @usage na.count(x)
 #' @param x a vector, data.frame, or matrix
 #' @return number of NAs in the object
 #' @author Eric Archer <eric.archer@@noaa.gov>
+#' 
+#' @examples
+#' x <- sample(c(1:10, NA), 30, replace = TRUE)
+#' na.count(x)
+#' x.df <- do.call(data.frame, lapply(1:4, function(i) sample(c(1:10, NA), 30, replace = TRUE)))
+#' colnames(x.df) <- paste("X", 1:4, sep = "")
+#' na.count(x.df)
 
 na.count <- function(x) {
   if (is.vector(x)) return (sum(is.na(x)))

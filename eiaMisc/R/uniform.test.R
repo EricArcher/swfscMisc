@@ -1,13 +1,17 @@
 #' @name uniform.test
-#' @title Uniform distribution test
-#' @aliases uniform.test
 #' @export uniform.test
+#' @title Uniform distribution test
 #' @description Tests whether a histogram is significantly different from a uniform distribution
-#' @usage uniform.test(hist.output, B = NULL)
 #' @param hist.output output from a call to \code{hist}
 #' @param B number of replicates for chi-squared permutation
 #' @return result of chi-squared test
 #' @author Eric Archer <eric.archer@@noaa.gov>
+#' 
+#' @examples
+#' x.unif <- runif(100)
+#' uniform.test(hist(x.unif), B = 1000)
+#' x.lnorm <- rlnorm(100)
+#' uniform.test(hist(x.lnorm), B = 1000)
 
 uniform.test <- function(hist.output, B = NULL) {
   break.diff <- diff(hist.output$breaks)

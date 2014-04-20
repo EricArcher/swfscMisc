@@ -14,6 +14,14 @@ a numeric vector of the same length as x
 Normalize a numeric vector to have a mean of zero and a
 standard deviation of one
 }
+\examples{
+x <- runif(20, 50, 110)
+x.norm <- normalize(x)
+mean(x)
+mean(x.norm)
+sd(x)
+sd(x.norm)
+}
 \author{
 Eric Archer <eric.archer@noaa.gov>
 }

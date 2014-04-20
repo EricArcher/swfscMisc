@@ -1,6 +1,5 @@
 #' @name color.name
 #' @title Color name
-#' @aliases color.name
 #' @export color.name
 #' @description Return the name of a color listed given the number
 #' @usage color.name(i)

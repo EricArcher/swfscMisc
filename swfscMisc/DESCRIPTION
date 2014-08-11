@@ -9,8 +9,7 @@ Description: Collection of utility, analytical, and plotting functions to
     support multiple packages released by the Southwest Fisheries Science
     Center.
 Imports:
-    gpclib,
     maps
 Depends:
     mapdata
-License: GNU General Public License
+License: GPL-3

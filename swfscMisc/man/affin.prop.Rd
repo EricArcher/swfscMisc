@@ -26,15 +26,14 @@ Runs the Affinity Propagation clustering algorithm of Frey and Dueck, 2007.
 }
 \examples{
 data(iris)
-iris <- iris[sample(1:nrow(iris), floor(nrow(iris) / 2)), ]
-droplevels(iris)
+
+# Take 75 random iris rows for example
+iris <- iris[sample(1:nrow(iris), 75), ]
+iris <- droplevels(iris)
+
 iris.sim <- -dist(iris[, -5])
 
 iris.affin <- affin.prop(iris.sim, stable.iter = 5)
-table(iris$Species, iris.affin[, ncol(iris.affin)])
-
-# Increase the damping factor 'lambda'
-iris.affin <- affin.prop(iris.sim, stable.iter = 5, lambda = 0.9)
 table(iris$Species, iris.affin[, ncol(iris.affin)])
 }
 \author{

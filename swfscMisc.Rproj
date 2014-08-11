@@ -15,4 +15,5 @@ LaTeX: pdfLaTeX
 BuildType: Package
 PackagePath: swfscMisc
 PackageInstallArgs: --no-multiarch --with-keep.source
+PackageCheckArgs: --as-cran
 PackageRoxygenize: rd,collate,namespace

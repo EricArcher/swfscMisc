@@ -3,11 +3,9 @@
 \alias{lat.lon.axes}
 \title{Latitude and Longitude axes}
 \usage{
-lat.lon.axes(lon.range, lat.range, n = 5, lon.n = n, lat.n = n)
+lat.lon.axes(n = 5, lon.n = n, lat.n = n)
 }
 \arguments{
-\item{lon.range,lat.range}{two-element vectors giving the minimum and maximum longitude and latitude.}
-
 \item{n,lon.n,lat.n}{the number of tick marks desired. Can be specified separately for longitude (\code{lon.n})
 or latitude (\code{lat.n}). See \code{\link{pretty}} for more details.}
 }

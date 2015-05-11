@@ -5,7 +5,8 @@
 \title{Destination on Sphere or Ellipsoid}
 \usage{
 destination(lat, lon, brng, distance, units = "nm", ellipsoid = datum(),
-  radius = convert.distance(6371, "km", "nm"), type = "ellipsoid")
+  radius = convert.distance(6371, "km", "nm"), type = c("ellipsoid",
+  "sphere", "vincenty"))
 }
 \arguments{
 \item{lat,lon}{numeric. The latitude and longitude of the coordinate in decimal degrees.}
@@ -40,7 +41,7 @@ Eric Archer \email{eric.archer@noaa.gov}
 }
 \references{
 Ellipsoid code adapted from JavaScript by Larry Bogan
-\url{http://www.go.ednet.ns.ca/~larry/bsc/jslatlng.html}.\cr
+\url{http://adsabs.harvard.edu/full/2000JRASC..94...48B}.\cr
 Vincenty code adapted from JavaScript by Chris Veness
 \url{http://www.movable-type.co.uk/scripts/latlong-vincenty-direct.html}
 Vincenty, T. 1975.  Direct and inverse solutions of geodesics on the ellipsoid with

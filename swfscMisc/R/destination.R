@@ -19,7 +19,7 @@
 #' 
 #' @references 
 #' Ellipsoid code adapted from JavaScript by Larry Bogan 
-#' \url{http://www.go.ednet.ns.ca/~larry/bsc/jslatlng.html}.\cr
+#' \url{http://adsabs.harvard.edu/full/2000JRASC..94...48B}.\cr
 #' Vincenty code adapted from JavaScript by Chris Veness 
 #' \url{http://www.movable-type.co.uk/scripts/latlong-vincenty-direct.html}
 #' Vincenty, T. 1975.  Direct and inverse solutions of geodesics on the ellipsoid with 
@@ -32,15 +32,15 @@
 #' destination(32.87, -117.25, 262, 4174, units = "km", type = "vincenty")
 
 destination <- function(lat, lon, brng, distance, units = "nm", 
-  ellipsoid = datum(), radius = convert.distance(6371, "km", "nm"), type = "ellipsoid") {
+  ellipsoid = datum(), radius = convert.distance(6371, "km", "nm"), 
+  type = c("ellipsoid", "sphere", "vincenty")) {
   
   distance <- convert.distance(distance, units, "km")
   lat <- convert.angle(lat, "degrees", "radians")
   lon <- convert.angle(lon, "degrees", "radians")
   brng <- convert.angle(brng, "degrees", "radians") 
   
-  m <- c("sphere", "ellipsoid", "vincenty")
-  type <- m[pmatch(tolower(type), m)]
+  type <- match.arg(type)
   if(type == "sphere") {
     psi <- distance / radius
     lat2 <- asin(sin(lat) * cos(psi) +  cos(lat) * sin(psi) * cos(brng))

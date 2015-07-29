@@ -17,10 +17,7 @@
 #' cr.pt <- crossing.point(line1, line2)
 #' print(cr.pt)
 #' 
-#' @importFrom spatstat crossing.psp
-#' @importFrom spatstat as.owin
-#' @importFrom spatstat as.data.frame.ppp
-#' @importFrom spatstat psp
+#' @importFrom spatstat crossing.psp as.owin as.data.frame.ppp psp
 #' @export
 #' 
 crossing.point <- function(l1, l2) {

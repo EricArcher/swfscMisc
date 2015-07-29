@@ -1,5 +1,3 @@
-#' @export destination
-#' 
 #' @title Destination on Sphere or Ellipsoid
 #' @description Calculates latitude and longitude of the destination along a sphere or ellipsoid.
 #' 
@@ -30,7 +28,9 @@
 #' destination(32.87, -117.25, 262, 4174, units = "km", type = "sphere")
 #' destination(32.87, -117.25, 262, 4174, units = "km", type = "ellipsoid")
 #' destination(32.87, -117.25, 262, 4174, units = "km", type = "vincenty")
-
+#' 
+#' @export
+#' 
 destination <- function(lat, lon, brng, distance, units = "nm", 
   ellipsoid = datum(), radius = convert.distance(6371, "km", "nm"), 
   type = c("ellipsoid", "sphere", "vincenty")) {

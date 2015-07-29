@@ -33,7 +33,7 @@ devtools::install_github('ericarcher/swfscMisc')
 
 ## Available functions:
 
-You can see the most recent changes to the package in the NEWS.md file: https://github.com/ericarcher/swfscMisc/swfscMisc/NEWS.md
+You can see the most recent changes to the package in the NEWS.md file: https://github.com/EricArcher/swfscMisc/blob/master/swfscMisc/NEWS.md
 
 * Geodesic related functions:
     * bearing

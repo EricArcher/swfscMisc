@@ -5,6 +5,7 @@
 #' 
 #' @author Eric Archer \email{eric.archer@@noaa.gov}
 #' 
+#' @importFrom stats na.omit
 #' @export
 #' 
 diversity <- function(x) {

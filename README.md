@@ -33,7 +33,11 @@ devtools::install_github('ericarcher/swfscMisc')
 
 ## Available functions:
 
+<<<<<<< HEAD
 You can see the most recent changes to the package in the NEWS.md file: https://github.com/ericarcher/swfscMisc/swfscMisc/NEWS.md
+=======
+You can see the most recent changes to the package in the NEWS.md file: https://github.com/ericarcher/swfscMisc/NEWS.md
+>>>>>>> 19c30aadb96a6cf802056e6f9e7ebf4e4fd1bf52
 
 
 * Geodesic related functions:

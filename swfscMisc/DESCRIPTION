@@ -2,7 +2,7 @@ Package: swfscMisc
 Type: Package
 Title: Miscellaneous Functions for Southwest Fisheries Science Center
 Version: 1.0.6
-Date: 2015-05-11
+Date: 2015-07-28
 Author: Eric Archer
 Maintainer: Eric Archer <eric.archer@noaa.gov>
 Description: Collection of conversion, analytical, geodesic, mapping, and

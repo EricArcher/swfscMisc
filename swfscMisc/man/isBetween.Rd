@@ -7,7 +7,7 @@
 isBetween(x, a, b = NULL, include.ends = FALSE, na.convert = TRUE)
 }
 \arguments{
-\item{x}{numeric value to check.}
+\item{x}{vector of numeric values to check.}
 
 \item{a,b}{numeric values describing range.}
 

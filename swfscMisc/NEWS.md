@@ -1,3 +1,9 @@
+# swfscMisc 1.0.7
+
+## Changes
+
+* Changed isBetween to accept a vector of numbers
+
 # swfscMisc 1.0.6
 
 ## Additions

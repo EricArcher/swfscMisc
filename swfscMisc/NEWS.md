@@ -1,3 +1,12 @@
+# swfscMisc 1.0.8
+
+## Bug Fixes
+
+* Fixed 'das.read' to handle errors in position and suppress warnings about NAs
+during numerical conversions.
+* Fixed 'das.map' to remove records with no position
+
+
 # swfscMisc 1.0.7
 
 ## Changes

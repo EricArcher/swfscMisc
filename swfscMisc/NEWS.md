@@ -1,3 +1,10 @@
+# swfscMisc 1.0.9
+
+## Changes
+
+* Changed distance and destination functions to accept partial matches for method 
+of calculation, type of surface, and units
+
 # swfscMisc 1.0.8
 
 ## Bug Fixes

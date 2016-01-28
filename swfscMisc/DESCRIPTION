@@ -5,10 +5,19 @@ Description: Collection of conversion, analytical, geodesic, mapping, and
     plotting functions. Used to support packages and code written by
     researchers at the Southwest Fisheries Science Center of the National
     Oceanic and Atmospheric Administration.
-Version: 1.0.8
-Date: 2015-09-03
+Version: 1.0.9
+Date: 2016-01-28
 Author: Eric Archer
 Maintainer: Eric Archer <eric.archer@noaa.gov>
-Depends: R (>= 3.2.0), mapdata
-Imports: graphics, grDevices, maps, spatstat, stats, utils
+Depends:
+    R (>= 3.2.0),
+    mapdata
+Imports:
+    graphics,
+    grDevices,
+    maps,
+    spatstat,
+    stats,
+    utils
 License: GPL (>= 2)
+RoxygenNote: 5.0.1

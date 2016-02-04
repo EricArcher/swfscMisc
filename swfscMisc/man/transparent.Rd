@@ -18,7 +18,7 @@ Return transparent form of a named color.
 \examples{
 
 pct <- seq(0, 100, by = 10)
-plot(pct, pct, bg = transparent("red", pct), pch = 21, cex = 3, xlab = "X", ylab = "Y")
+plot(pct, pct, bg = transparent("red", pct), pch = 21, cex = 4, xlab = "X", ylab = "Y")
 
 }
 \author{

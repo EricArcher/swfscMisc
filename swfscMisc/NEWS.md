@@ -1,5 +1,9 @@
 # swfscMisc 1.0.9
 
+## Additions
+
+* Added 'transparent' function
+
 ## Changes
 
 * Changed distance and destination functions to accept partial matches for method 

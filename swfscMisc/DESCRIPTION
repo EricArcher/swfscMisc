@@ -6,7 +6,7 @@ Description: Collection of conversion, analytical, geodesic, mapping, and
     researchers at the Southwest Fisheries Science Center of the National
     Oceanic and Atmospheric Administration.
 Version: 1.0.9
-Date: 2016-02-03
+Date: 2016-02-04
 Author: Eric Archer
 Maintainer: Eric Archer <eric.archer@noaa.gov>
 Depends:

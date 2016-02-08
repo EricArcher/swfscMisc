@@ -12,6 +12,7 @@
 #' pct <- seq(0, 100, by = 10)
 #' plot(pct, pct, bg = transparent("red", pct), pch = 21, cex = 4, xlab = "X", ylab = "Y")
 #' 
+#' @importFrom grDevices col2rgb rgb
 #' @export
 #' 
 transparent <- function(col, percent = 50) {

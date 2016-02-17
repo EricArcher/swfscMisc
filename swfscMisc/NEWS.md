@@ -1,5 +1,9 @@
 # swfscMisc 1.1
 
+## Additions
+
+* Added 'autoUnits' function
+
 ## Changes
 
 * Changed default arguments for lat.range and lon.range to NULL in sample.map. If not specified, the ranges will be set to the ranges of the lat and lon.

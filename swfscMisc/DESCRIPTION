@@ -5,8 +5,8 @@ Description: Collection of conversion, analytical, geodesic, mapping, and
     plotting functions. Used to support packages and code written by
     researchers at the Southwest Fisheries Science Center of the National
     Oceanic and Atmospheric Administration.
-Version: 1.0.9
-Date: 2016-02-07
+Version: 1.1
+Date: 2016-02-16
 Author: Eric Archer
 Maintainer: Eric Archer <eric.archer@noaa.gov>
 Depends:

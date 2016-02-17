@@ -1,3 +1,10 @@
+# swfscMisc 1.1
+
+## Changes
+
+* Changed default arguments for lat.range and lon.range to NULL in sample.map. If not specified, the ranges will be set to the ranges of the lat and lon.
+
+
 # swfscMisc 1.0.9
 
 ## Additions

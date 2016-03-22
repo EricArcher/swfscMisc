@@ -6,9 +6,9 @@ Description: Collection of conversion, analytical, geodesic, mapping, and
     researchers at the Southwest Fisheries Science Center of the National
     Oceanic and Atmospheric Administration.
 Version: 1.1
-Date: 2016-03-03
-Author: Eric Archer
-Maintainer: Eric Archer <eric.archer@noaa.gov>
+Authors@R: c(
+  EA = person("Eric", "Archer", email = "eric.archer@noaa.gov", role = c("aut", "cre")))
+BugReports: https://github.com/EricArcher/swfscMisc/issues
 Depends:
     R (>= 3.2.3),
     mapdata

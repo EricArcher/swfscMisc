@@ -46,8 +46,8 @@
 sample.map <- function(lat, lon, lat.range = NULL, lon.range = NULL, main = NULL, 
                        pch = 19, pt.cex = 1, col = "black", bg = col, n = 5, 
                        lon.n = n, lat.n = n) {
-  if(is.null(lon.range)) lon.range <- range(lon)
-  if(is.null(lat.range)) lat.range <- range(lat)
+  if(is.null(lon.range)) lon.range <- range(lon, na.rm = TRUE)
+  if(is.null(lat.range)) lat.range <- range(lat, na.rm = TRUE)
   pacific.cent <- lon.range[1] > lon.range[2]
   if(pacific.cent) {
     lon <- ifelse(lon < 0, 360 + lon, lon)

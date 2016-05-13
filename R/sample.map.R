@@ -63,6 +63,7 @@ sample.map <- function(lat, lon, lat.range = NULL, lon.range = NULL, main = NULL
   if(length(pch) == length(lon)) pch <- pch[to.plot]
   if(length(pt.cex) == length(lon)) pt.cex <- pt.cex[to.plot]
   if(length(col) == length(lon)) col <- col[to.plot]
+  if(length(bg) == length(lon)) bg <- bg[to.plot]
 
   op <- par(mar = c(3, 5, ifelse(is.null(main), 3, 5), 5) + 0.1, oma = c(1, 1, 1, 1))
     

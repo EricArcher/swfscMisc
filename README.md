@@ -1,5 +1,5 @@
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/swfscMisc)](https://cran.r-project.org/package=swfscMisc)
-[![](http://cranlogs.r-pkg.org/badges/swfscMisc)](http://cran.rstudio.com/web/packages/swfscMisc/index.html)
+[![](http://cranlogs.r-pkg.org/badges/grand-total/swfscMisc)](http://cran.rstudio.com/web/packages/swfscMisc/index.html)
 [![Travis-CI Build Status](https://travis-ci.org/EricArcher/swfscMisc.svg?branch=master)](https://travis-ci.org/EricArcher/swfscMisc)
 
 # swfscMisc

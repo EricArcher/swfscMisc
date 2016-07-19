@@ -12,7 +12,7 @@
 #'
 #' @author Eric Archer \email{eric.archer@@noaa.gov}
 #' 
-#' @seealso \code{\link[base]{round}}
+#' @seealso \code{\link[base]{Round}}
 #'
 #' @examples
 #' data(mtcars)
@@ -22,57 +22,56 @@
 #' signif(mtcars, 2)
 #'
 #' @name round
-#' @aliases ceiling.data.frame floor.data.frame trunc.data.frame round.data.frame signif.data.frame ceiling floor trunc round siginif
-#' @importFrom methods setMethod
+#' @aliases ceiling floor trunc round siginif
 #' 
 NULL
 
 #' @rdname round
 #' @export
 #' 
-setMethod("ceiling", "data.frame", function(x) {
+ceiling.data.frame <- function(x) {
   for(i in 1:ncol(x)) {
     if(is.numeric(x[[i]])) x[[i]] <- ceiling(x[[i]])
   }
   x
-})
+}
 
 #' @rdname round
 #' @export
 #' 
-setMethod("floor", "data.frame", function(x) {
+floor.data.frame <- function(x) {
   for(i in 1:ncol(x)) {
     if(is.numeric(x[[i]])) x[[i]] <- floor(x[[i]])
   }
   x
-})
+}
 
 #' @rdname round
 #' @export
 #' 
-setMethod("trunc", "data.frame", function(x, ...) {
+trunc.data.frame <- function(x, ...) {
   for(i in 1:ncol(x)) {
     if(is.numeric(x[[i]])) x[[i]] <- ceiling(x[[i]], ...)
   }
   x
-})
+}
 
 #' @rdname round
 #' @export
 #' 
-setMethod("round", "data.frame", function(x, digits = 0) {
+round.data.frame <- function(x, digits = 0) {
   for(i in 1:ncol(x)) {
     if(is.numeric(x[[i]])) x[[i]] <- round(x[[i]], digits = digits)
   }
   x
-})
+}
 
 #' @rdname round
 #' @export
 #' 
-setMethod("signif", "data.frame", function(x, digits = 6) {
+signif.data.frame <- function(x, digits = 6) {
   for(i in 1:ncol(x)) {
     if(is.numeric(x[[i]])) x[[i]] <- signif(x[[i]], digits = digits)
   }
   x
-})
+}

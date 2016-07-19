@@ -16,7 +16,6 @@ Imports:
     graphics,
     grDevices,
     maps,
-    methods,
     spatstat,
     stats,
     utils

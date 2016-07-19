@@ -88,6 +88,8 @@ devtools::install_github('ericarcher/swfscMisc')
   
 ## Changes in v 1.1.1
 
+* Added rounding functions for data.frames.
+
 ## Changes in v 1.1
 
 * Added `autoUnits` function

@@ -16,8 +16,9 @@ Imports:
     graphics,
     grDevices,
     maps,
+    methods,
     spatstat,
     stats,
     utils
 License: GPL (>= 2)
-RoxygenNote: 5.0.1
+RoxygenNote: 5.0.1.9000

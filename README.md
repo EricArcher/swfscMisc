@@ -1,6 +1,9 @@
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/swfscMisc)](https://cran.r-project.org/package=swfscMisc)
-[![](http://cranlogs.r-pkg.org/badges/grand-total/swfscMisc)](http://cran.rstudio.com/web/packages/swfscMisc/index.html)
-[![Travis-CI Build Status](https://travis-ci.org/EricArcher/swfscMisc.svg?branch=master)](https://travis-ci.org/EricArcher/swfscMisc)
+[![Travis-CI Build Status](https://travis-ci.org/EricArcher/swfscMisc.svg?branch=master)](https://travis-ci.org/EricArcher/swfscMisc)  
+[![](http://cranlogs.r-pkg.org/badges/last-day/swfscMisc)](https://cran.r-project.org/package=swfscMisc)
+[![](http://cranlogs.r-pkg.org/badges/last-week/swfscMisc)](https://cran.r-project.org/package=swfscMisc)
+[![](http://cranlogs.r-pkg.org/badges/swfscMisc)](https://cran.r-project.org/package=swfscMisc)
+[![](http://cranlogs.r-pkg.org/badges/grand-total/swfscMisc)](https://cran.r-project.org/package=swfscMisc)
 
 # swfscMisc
 
@@ -34,7 +37,7 @@ devtools::install_github('ericarcher/swfscMisc')
 * send a pull request: <https://github.com/ericarcher/swfscMisc/>
 * e-mail: <eric.archer@noaa.gov>
 
-## Available functions:
+## Current functions
 
 * Geodesic related functions:
     * bearing
@@ -82,36 +85,39 @@ devtools::install_github('ericarcher/swfscMisc')
     * odds
     * one.arg
     * pVal
+    * ceiling, floor, trunc, round (.data.frame)
     * uniform.test
     * which.nearest
     * zero.pad
-  
-## Changes in v 1.1.1
+
+## Changes
+
+### version 1.1.1
 
 * Added rounding functions for data.frames.
 
-## Changes in v 1.1
+### version 1.1
 
 * Added `autoUnits` function
 * Changed default arguments for `lat.range` and `lon.range` to `NULL` in `sample.map`. If not specified, the ranges will be set to the ranges of the `lat` and `lon`.
 
-## Changes in v 1.0.9
+### version 1.0.9
 
 * Added `transparent` function
 * Changed distance and destination functions to accept partial matches for method 
 of calculation, type of surface, and units
 
-## Changes in v 1.0.8
+### version 1.0.8
 
-* Fixed `das.read` to handle errors in position and suppress warnings about NAs
+* Fixed `das.read` to handle errors in position and suppress warnings about `NA`s
 during numerical conversions.
 * Fixed `das.map` to remove records with no position
 
-## Changes in v 1.0.7
+### version 1.0.7
 
-* Changed isBetween to accept a vector of numbers
+* Changed `isBetween` to accept a vector of numbers
 
-# Changes in v 1.0.6
+### version 1.0.6
 
 * Added NEWS.md
 * Added `diversity` function (moved from strataG package)

@@ -1,10 +1,9 @@
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/swfscMisc)](https://cran.r-project.org/package=swfscMisc)
 [![Travis-CI Build Status](https://travis-ci.org/EricArcher/swfscMisc.svg?branch=master)](https://travis-ci.org/EricArcher/swfscMisc)  
-[![](http://cranlogs.r-pkg.org/badges/last-day/swfscMisc)](https://cran.r-project.org/package=swfscMisc)
-[![](http://cranlogs.r-pkg.org/badges/last-week/swfscMisc)](https://cran.r-project.org/package=swfscMisc)
-[![](http://cranlogs.r-pkg.org/badges/swfscMisc)](https://cran.r-project.org/package=swfscMisc)
-[![](http://cranlogs.r-pkg.org/badges/grand-total/swfscMisc)](https://cran.r-project.org/package=swfscMisc)
-
+![](http://cranlogs.r-pkg.org/badges/last-day/swfscMisc?color=red)
+![](http://cranlogs.r-pkg.org/badges/last-week/swfscMisc?color=red)
+![](http://cranlogs.r-pkg.org/badges/swfscMisc?color=red)
+![](http://cranlogs.r-pkg.org/badges/grand-total/swfscMisc?color=red)  
 # swfscMisc
 
 ## Description
@@ -39,7 +38,7 @@ devtools::install_github('ericarcher/swfscMisc')
 
 ## Current functions
 
-* Geodesic related functions:
+* Geodesic functions:
     * bearing
     * datum
     * distance
@@ -76,13 +75,10 @@ devtools::install_github('ericarcher/swfscMisc')
     * fisher.method.p
     * geometric.mean
     * harmonic.mean
-    * invLogOdds
-    * invOdds
     * isBetween
-    * logOdds
     * na.count
     * normalize
-    * odds
+    * odds conversion (odds, invOdds, logOdds, invLogOdds)
     * one.arg
     * pVal
     * ceiling, floor, trunc, round (.data.frame)
@@ -90,34 +86,33 @@ devtools::install_github('ericarcher/swfscMisc')
     * which.nearest
     * zero.pad
 
-## Changes
-
-### version 1.1.1
+## version 1.1.1
 
 * Added rounding functions for data.frames.
+* Removed NEWS.md - changelog moved to README.md
 
-### version 1.1
+## version 1.1
 
 * Added `autoUnits` function
 * Changed default arguments for `lat.range` and `lon.range` to `NULL` in `sample.map`. If not specified, the ranges will be set to the ranges of the `lat` and `lon`.
 
-### version 1.0.9
+## version 1.0.9
 
 * Added `transparent` function
 * Changed distance and destination functions to accept partial matches for method 
 of calculation, type of surface, and units
 
-### version 1.0.8
+## version 1.0.8
 
 * Fixed `das.read` to handle errors in position and suppress warnings about `NA`s
 during numerical conversions.
 * Fixed `das.map` to remove records with no position
 
-### version 1.0.7
+## version 1.0.7
 
 * Changed `isBetween` to accept a vector of numbers
 
-### version 1.0.6
+## version 1.0.6
 
 * Added NEWS.md
 * Added `diversity` function (moved from strataG package)

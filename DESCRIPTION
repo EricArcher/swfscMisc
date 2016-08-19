@@ -15,7 +15,9 @@ Depends:
 Imports:
     graphics,
     grDevices,
+    ggplot2,
     maps,
+    reshape2,
     spatstat,
     stats,
     utils

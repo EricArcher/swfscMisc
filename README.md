@@ -80,6 +80,7 @@ devtools::install_github('ericarcher/swfscMisc')
     * normalize
     * odds conversion (odds, invOdds, logOdds, invLogOdds)
     * one.arg
+    * plotAssignments
     * pVal
     * ceiling, floor, trunc, round (.data.frame)
     * uniform.test
@@ -90,6 +91,7 @@ devtools::install_github('ericarcher/swfscMisc')
 
 * Added rounding functions for data.frames.
 * Removed NEWS.md - changelog moved to README.md
+* Added `plotAssignments` function.
 
 ## version 1.1
 

@@ -8,6 +8,7 @@ Description: Collection of conversion, analytical, geodesic, mapping, and
 Version: 1.2
 Authors@R: c(
   EA = person("Eric", "Archer", email = "eric.archer@noaa.gov", role = c("aut", "cre")))
+URL: https://github.com/EricArcher/swfscMisc
 BugReports: https://github.com/EricArcher/swfscMisc/issues
 Depends:
     R (>= 3.2.3),

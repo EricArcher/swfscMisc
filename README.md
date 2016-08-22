@@ -1,9 +1,10 @@
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/swfscMisc)](https://cran.r-project.org/package=swfscMisc)
-[![Travis-CI Build Status](https://travis-ci.org/EricArcher/swfscMisc.svg?branch=master)](https://travis-ci.org/EricArcher/swfscMisc)  
+![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/swfscMisc?color=red)
 ![](http://cranlogs.r-pkg.org/badges/last-day/swfscMisc?color=red)
 ![](http://cranlogs.r-pkg.org/badges/last-week/swfscMisc?color=red)
 ![](http://cranlogs.r-pkg.org/badges/swfscMisc?color=red)
 ![](http://cranlogs.r-pkg.org/badges/grand-total/swfscMisc?color=red)  
+[![Travis-CI Build Status](https://travis-ci.org/EricArcher/swfscMisc.svg?branch=master)](https://travis-ci.org/EricArcher/swfscMisc)
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/EricArcher/swfscMisc?branch=master&svg=true)](https://ci.appveyor.com/project/EricArcher/swfscMisc)  
 # swfscMisc
 
 ## Description
@@ -87,7 +88,7 @@ devtools::install_github('ericarcher/swfscMisc')
     * which.nearest
     * zero.pad
 
-## version 1.1.1
+## version 1.1.1 (current on GitHub)
 
 * Added rounding functions for data.frames.
 * Removed NEWS.md - changelog moved to README.md

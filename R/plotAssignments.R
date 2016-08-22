@@ -36,7 +36,8 @@
 #' plotAssignments(probs, orig)
 #' 
 #' @importFrom reshape2 melt
-#' @importFrom ggplot2 ggplot aes_string geom_area geom_bar scale_fill_discrete guide_legend facet_wrap labs theme element_text element_blank
+#' @importFrom ggplot2 ggplot aes_string geom_area geom_bar scale_fill_discrete 
+#' @importFrom ggplot2 ylab guide_legend facet_wrap labs theme element_text element_blank
 #' @export
 #'
 plotAssignments <- function(probs, orig, type = NULL, ylab = NULL, plot = TRUE) {
@@ -64,12 +65,13 @@ plotAssignments <- function(probs, orig, type = NULL, ylab = NULL, plot = TRUE) 
       bar = geom_bar(aes_string(fill = "pred"), stat = "identity")
     ) +
     scale_fill_discrete(guide = guide_legend(title = "Predicted")) +
-    facet_wrap(~ orig, scales = "free_x") +
-    labs(x = "", y = ylab) +
+    # facet_wrap(~ orig, scales = "free_x") +
+    ylab(ylab) +
     theme(
       legend.position = "top",
       text = element_text(size = 14),
       axis.text.x = element_blank(),
+      axis.title.x = element_blank(),
       axis.ticks.x = element_blank(),
       plot.title = element_text(hjust = 0)
     )

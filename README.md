@@ -89,7 +89,7 @@ devtools::install_github('ericarcher/swfscMisc')
     * which.nearest
     * zero.pad
 
-## version 1.2 (current on GitHub)
+## Development version (current on GitHub)
 
 * Added rounding functions for data.frames.
 * Removed NEWS.md - changelog moved to README.md

@@ -65,7 +65,7 @@ plotAssignments <- function(probs, orig, type = NULL, ylab = NULL, plot = TRUE) 
       bar = geom_bar(aes_string(fill = "pred"), stat = "identity")
     ) +
     scale_fill_discrete(guide = guide_legend(title = "Predicted")) +
-    # facet_wrap(~ orig, scales = "free_x") +
+    facet_wrap(~ orig, scales = "free_x") +
     ylab(ylab) +
     theme(
       legend.position = "top",

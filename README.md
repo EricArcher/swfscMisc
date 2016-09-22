@@ -91,6 +91,8 @@ devtools::install_github('ericarcher/swfscMisc')
 
 ## Development version (current on GitHub)
 
+## version 1.2
+
 * Added rounding functions for data.frames.
 * Removed NEWS.md - changelog moved to README.md
 * Added `plotAssignments` function.

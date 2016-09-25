@@ -48,7 +48,7 @@ plotAssignments <- function(probs, orig, type = NULL, ylab = NULL, plot = TRUE) 
   df$id <- 1:nrow(df)
   freq <- table(df$orig)
   df <- melt(df, id.vars = c("id", "orig"), variable.name = "pred", value.name = "prob")
-  levels(df$orig) <- paste(names(freq), " (n = ", freq, ")", sep = "")
+  levels(df$orig) <- paste(names(freq), "\n(n = ", freq, ")", sep = "")
   
   type <- if(is.null(type)) {
     if(all(freq <= 30)) "bar" else "area"

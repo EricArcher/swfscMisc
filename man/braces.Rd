@@ -47,4 +47,3 @@ braces(20, 80, 13, 15, 1)
 \author{
 Tim Gerrodette \email{tim.gerrodette@noaa.gov}
 }
-

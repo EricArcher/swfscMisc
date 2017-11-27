@@ -27,4 +27,3 @@ sd(x.norm)
 \author{
 Eric Archer \email{eric.archer@noaa.gov}
 }
-

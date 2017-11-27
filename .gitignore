@@ -6,3 +6,4 @@ swfscMisc.Rcheck/
 .DS_Store
 DASALL.ALL
 .Rapp.history
+devel/*

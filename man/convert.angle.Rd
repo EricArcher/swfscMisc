@@ -24,4 +24,3 @@ convert.angle(4.5, "r", "d")
 \author{
 Eric Archer \email{eric.archer@noaa.gov}
 }
-

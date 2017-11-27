@@ -53,10 +53,9 @@ lon.range <- c(110, -110)
 sample.map(lat, lon, lat.range, lon.range)
 
 }
-\author{
-Eric Archer \email{eric.archer@noaa.gov}
-}
 \seealso{
 \code{\link{lat.lon.axes}}
 }
-
+\author{
+Eric Archer \email{eric.archer@noaa.gov}
+}

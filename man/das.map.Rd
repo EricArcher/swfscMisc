@@ -31,4 +31,3 @@ Map sightings, effort, and beaufort from DAS file
 \author{
 Eric Archer \email{eric.archer@noaa.gov}
 }
-

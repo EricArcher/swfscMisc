@@ -15,4 +15,3 @@ Calculate unbiased estimate of diversity for a vector of items
 \author{
 Eric Archer \email{eric.archer@noaa.gov}
 }
-

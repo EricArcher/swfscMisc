@@ -15,18 +15,20 @@
 #' pc.cr <- princomp(USArrests, cor = TRUE)
 #' ggBiplot(pc.cr)
 #' 
+#' @importFrom dplyr select mutate
+#' @importFrom ggplot2 aes geom_hline geom_vline geom_point geom_segment arrow
+#' @importFrom ggrepel geom_label_repel
+#' @importFrom tibble column_to_rownames rownames_to_column
+#' @importFrom stats setNames
+#' 
 #' @export
 #' 
 ggBiplot <- function(pca, x = 1, y = 2, mult.fac = 0.8, arrow.size = 1.5, label.size = 6) {
-  suppressPackageStartupMessages({
-    library(tidyverse)
-    library(ggrepel)
-  })
   if(is.numeric(x)) x <- colnames(pca$scores)[x]
   if(is.numeric(y)) y <- colnames(pca$scores)[y]
   
   scores <- as.data.frame(pca$scores) %>% 
-    select_(x, y) %>% 
+    dplyr::select(x, y) %>% 
     setNames(c("x", "y"))
   
   mult <- min(
@@ -36,29 +38,29 @@ ggBiplot <- function(pca, x = 1, y = 2, mult.fac = 0.8, arrow.size = 1.5, label.
   
   ldngs <- cbind(pca$loadings) %>% 
     as.data.frame() %>% 
-    rownames_to_column() %>% 
-    select(rowname, x, y) %>% 
+    tibble::rownames_to_column() %>% 
+    dplyr::select(rowname, x, y) %>% 
     setNames(c("rowname", "x", "y")) %>% 
-    mutate(
+    dplyr::mutate(
       x = x * mult,
       y = y * mult,
       origin = 0
     ) %>% 
-    column_to_rownames()
+    tibble::column_to_rownames()
   
-  g <- ggplot(scores, aes(x, y)) + 
-    geom_hline(yintercept = 0) + 
-    geom_vline(xintercept = 0) +
-    geom_point(color = "grey", alpha = 0.7) + 
-    geom_segment(
-      aes(x = origin, xend = x, y = origin, yend = y), 
+  g <- ggplot2::ggplot(scores, aes(x, y)) + 
+    ggplot2::geom_hline(yintercept = 0) + 
+    ggplot2::geom_vline(xintercept = 0) +
+    ggplot2::geom_point(color = "grey", alpha = 0.7) + 
+    ggplot2::geom_segment(
+      ggplot2::aes(x = origin, xend = x, y = origin, yend = y), 
       data = ldngs, 
       color = "red", 
       size = arrow.size, 
-      arrow = arrow()
+      arrow = ggplot2::arrow()
     ) +
-    geom_label_repel(
-      aes(x = x, y = y, label = rownames(ldngs)), 
+    ggrepel::geom_label_repel(
+      ggplot2::aes(x = x, y = y, label = rownames(ldngs)), 
       data = ldngs, 
       color = "red", 
       size = label.size

@@ -16,7 +16,11 @@ Depends:
 Imports:
     graphics,
     grDevices,
+    dplyr,
     ggplot2,
+    ggrepel,
+    magrittr,
+    tibble,
     maps,
     reshape2,
     spatstat,

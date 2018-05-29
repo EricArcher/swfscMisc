@@ -29,7 +29,7 @@ ggBiplot <- function(pca, x = 1, y = 2, mult.fac = 0.8, arrow.size = 1.5, label.
   
   scores <- as.data.frame(pca$scores) %>% 
     dplyr::select(x, y) %>% 
-    setNames(c("x", "y"))
+    stats::setNames(c("x", "y"))
   
   mult <- min(
     (max(scores[, 1]) - min(scores[, 1]) / diff(range(pca$loadings[, x]))),
@@ -39,8 +39,8 @@ ggBiplot <- function(pca, x = 1, y = 2, mult.fac = 0.8, arrow.size = 1.5, label.
   ldngs <- cbind(pca$loadings) %>% 
     as.data.frame() %>% 
     tibble::rownames_to_column() %>% 
-    dplyr::select(rowname, x, y) %>% 
-    setNames(c("rowname", "x", "y")) %>% 
+    dplyr::select((rowname), x, y) %>% 
+    stats::setNames(c("rowname", "x", "y")) %>% 
     dplyr::mutate(
       x = x * mult,
       y = y * mult,

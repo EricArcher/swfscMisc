@@ -4,9 +4,9 @@
 \alias{distance}
 \title{Distance Between Coordinates}
 \usage{
-distance(lat1, lon1, lat2, lon2, radius = convert.distance(6371, "km", "nm"),
-  units = c("nm", "km", "mi"), ellipsoid = datum(), iter.limit = 20,
-  method = c("lawofcosines", "haversine", "vincenty"))
+distance(lat1, lon1, lat2, lon2, radius = convert.distance(6371, "km",
+  "nm"), units = c("nm", "km", "mi"), ellipsoid = datum(),
+  iter.limit = 20, method = c("lawofcosines", "haversine", "vincenty"))
 }
 \arguments{
 \item{lat1, lon1, lat2, lon2}{The latitude and longitude of the first and 

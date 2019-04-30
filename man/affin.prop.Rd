@@ -4,8 +4,8 @@
 \alias{affin.prop}
 \title{Affinity Propagation}
 \usage{
-affin.prop(sim.mat, num.iter = 100, stable.iter = 10, shared.pref = "min",
-  lambda = 0.5)
+affin.prop(sim.mat, num.iter = 100, stable.iter = 10,
+  shared.pref = "min", lambda = 0.5)
 }
 \arguments{
 \item{sim.mat}{a similarity matrix between individuals to be clustered.}

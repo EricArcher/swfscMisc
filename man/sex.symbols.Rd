@@ -4,7 +4,8 @@
 \alias{sex.symbols}
 \title{Sex Symbols}
 \usage{
-sex.symbols(x, y, sex = 1, col = par("fg"), lwd = par("lwd"), cex = 1)
+sex.symbols(x, y, sex = 1, col = par("fg"), lwd = par("lwd"),
+  cex = 1)
 }
 \arguments{
 \item{x, y}{the \code{x} and \code{y} coordinates on the current plot.}

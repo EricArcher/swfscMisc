@@ -15,12 +15,6 @@
 #' pc.cr <- princomp(USArrests, cor = TRUE)
 #' ggBiplot(pc.cr)
 #' 
-#' @importFrom dplyr select mutate
-#' @importFrom ggplot2 aes geom_hline geom_vline geom_point geom_segment arrow
-#' @importFrom ggrepel geom_label_repel
-#' @importFrom tibble column_to_rownames rownames_to_column
-#' @importFrom stats setNames
-#' 
 #' @export
 #' 
 ggBiplot <- function(pca, x = 1, y = 2, mult.fac = 0.8, arrow.size = 1.5, label.size = 6) {
@@ -36,36 +30,34 @@ ggBiplot <- function(pca, x = 1, y = 2, mult.fac = 0.8, arrow.size = 1.5, label.
     (max(scores[, 2]) - min(scores[, 2]) / diff(range(pca$loadings[, y])))
   ) * mult.fac
   
-  ldngs <- cbind(pca$loadings) %>% 
-    as.data.frame() %>% 
-    tibble::rownames_to_column() %>% 
-    dplyr::select((rowname), x, y) %>% 
-    stats::setNames(c("rowname", "x", "y")) %>% 
+  ldngs <- data.frame(cbind(pca$loadings))[, c(x, y)] %>% 
+    stats::setNames(c("x", "y")) %>% 
+    tibble::rownames_to_column("id") %>% 
+    dplyr::select(.data$id, .data$x, .data$y) %>% 
     dplyr::mutate(
-      x = x * mult,
-      y = y * mult,
+      x = .data$x * mult,
+      y = .data$y * mult,
       origin = 0
-    ) %>% 
-    tibble::column_to_rownames()
+    ) 
   
-  g <- ggplot2::ggplot(scores, aes(x, y)) + 
+  g <- ggplot2::ggplot(scores, ggplot2::aes_string("x", "y")) + 
     ggplot2::geom_hline(yintercept = 0) + 
     ggplot2::geom_vline(xintercept = 0) +
     ggplot2::geom_point(color = "grey", alpha = 0.7) + 
     ggplot2::geom_segment(
-      ggplot2::aes(x = origin, xend = x, y = origin, yend = y), 
+      ggplot2::aes_string(x = "origin", xend = "x", y = "origin", yend = "y"), 
       data = ldngs, 
       color = "red", 
       size = arrow.size, 
       arrow = ggplot2::arrow()
     ) +
     ggrepel::geom_label_repel(
-      ggplot2::aes(x = x, y = y, label = rownames(ldngs)), 
+      ggplot2::aes_string(x = "x", y = "y", label = "id"), 
       data = ldngs, 
       color = "red", 
       size = label.size
     ) +
-    labs(x = x, y = y)
+    ggplot2::labs(x = x, y = y)
   print(g)
   
   invisible(g)

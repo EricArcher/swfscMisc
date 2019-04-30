@@ -4,9 +4,10 @@
 \alias{circle.polygon}
 \title{Circle Polygon (on Earth)}
 \usage{
-circle.polygon(x, y, radius, brng.limits = 0, sides = 1, by.length = TRUE,
-  units = "nm", ellipsoid = datum(), dist.method = "lawofcosines",
-  destination.type = "ellipsoid", poly.type = "cart.earth")
+circle.polygon(x, y, radius, brng.limits = 0, sides = 1,
+  by.length = TRUE, units = "nm", ellipsoid = datum(),
+  dist.method = "lawofcosines", destination.type = "ellipsoid",
+  poly.type = "cart.earth")
 }
 \arguments{
 \item{x, y}{number specifying the coordinates of the center of the circle in decimal degrees. 

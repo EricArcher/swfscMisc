@@ -67,7 +67,7 @@ round.data.frame <- function(x, digits = 0) {
 }
 
 #' @rdname round
-#' @export
+#' @export signif.data.frame
 #' 
 signif.data.frame <- function(x, digits = 6) {
   for(i in 1:ncol(x)) {

@@ -5,7 +5,7 @@
 \alias{ceiling}
 \alias{floor}
 \alias{trunc}
-\alias{siginif}
+\alias{signif}
 \alias{ceiling.data.frame}
 \alias{floor.data.frame}
 \alias{trunc.data.frame}

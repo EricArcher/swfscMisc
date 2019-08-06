@@ -4,7 +4,8 @@
 \alias{plotAssignments}
 \title{Plot assignment distributions}
 \usage{
-plotAssignments(probs, orig, type = NULL, ylab = NULL, plot = TRUE)
+plotAssignments(probs, orig, type = NULL, ylab = NULL,
+  freq.sep.line = TRUE, plot = TRUE)
 }
 \arguments{
 \item{probs}{matrix or data.frame of individual assignment probabilities. 
@@ -19,6 +20,10 @@ numbers of cases. If not specified, a bar chart will be used if all
 classes have <= 30 cases.}
 
 \item{ylab}{label for y-axis}
+
+\item{freq.sep.line}{put frequency of original group on second line in facet 
+label? If \code{FALSE}, labels are single line. If \code{NULL} frequencies 
+will not be included in labels.}
 
 \item{plot}{display the plot?}
 }

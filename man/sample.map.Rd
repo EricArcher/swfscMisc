@@ -4,9 +4,20 @@
 \alias{sample.map}
 \title{Plot Samples on World Map}
 \usage{
-sample.map(lat, lon, lat.range = NULL, lon.range = NULL, main = NULL,
-  pch = 19, pt.cex = 1, col = "black", bg = col, n = 5,
-  lon.n = n, lat.n = n)
+sample.map(
+  lat,
+  lon,
+  lat.range = NULL,
+  lon.range = NULL,
+  main = NULL,
+  pch = 19,
+  pt.cex = 1,
+  col = "black",
+  bg = col,
+  n = 5,
+  lon.n = n,
+  lat.n = n
+)
 }
 \arguments{
 \item{lon, lat}{vectors giving the longitude and latitude of points to plot.}

@@ -4,8 +4,16 @@
 \alias{braces}
 \title{Braces}
 \usage{
-braces(xfrom, xto, yfrom, yto, radius = 1, col = par("fg"),
-  lty = par("lty"), lwd = par("lwd"))
+braces(
+  xfrom,
+  xto,
+  yfrom,
+  yto,
+  radius = 1,
+  col = par("fg"),
+  lty = par("lty"),
+  lwd = par("lwd")
+)
 }
 \arguments{
 \item{xfrom, xto, yfrom, yto}{start and end points of braces. Direction of brace determined by from and to arguments.}

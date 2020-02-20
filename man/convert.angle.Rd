@@ -4,8 +4,7 @@
 \alias{convert.angle}
 \title{Angle Conversion}
 \usage{
-convert.angle(x, from = c("degrees", "radians"), to = c("radians",
-  "degrees"))
+convert.angle(x, from = c("degrees", "radians"), to = c("radians", "degrees"))
 }
 \arguments{
 \item{x}{numeric. The angle to be converted.}

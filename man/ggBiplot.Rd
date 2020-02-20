@@ -4,8 +4,7 @@
 \alias{ggBiplot}
 \title{ggBiplot}
 \usage{
-ggBiplot(pca, x = 1, y = 2, mult.fac = 0.8, arrow.size = 1.5,
-  label.size = 6)
+ggBiplot(pca, x = 1, y = 2, mult.fac = 0.8, arrow.size = 1.5, label.size = 6)
 }
 \arguments{
 \item{pca}{result from a call to \code{\link{princomp}}.}

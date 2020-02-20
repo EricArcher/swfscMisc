@@ -4,8 +4,7 @@
 \alias{datum}
 \title{Datum}
 \usage{
-datum(model = c("wgs84", "grs80", "airy", "international", "clarke",
-  "grs67"))
+datum(model = c("wgs84", "grs80", "airy", "international", "clarke", "grs67"))
 }
 \arguments{
 \item{model}{character, specifying which model to use for ellipsoid model. 

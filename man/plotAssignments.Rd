@@ -4,8 +4,14 @@
 \alias{plotAssignments}
 \title{Plot assignment distributions}
 \usage{
-plotAssignments(probs, orig, type = NULL, ylab = NULL,
-  freq.sep.line = TRUE, plot = TRUE)
+plotAssignments(
+  probs,
+  orig,
+  type = NULL,
+  ylab = NULL,
+  freq.sep.line = TRUE,
+  plot = TRUE
+)
 }
 \arguments{
 \item{probs}{matrix or data.frame of individual assignment probabilities. 

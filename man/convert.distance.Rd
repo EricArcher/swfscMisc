@@ -4,8 +4,7 @@
 \alias{convert.distance}
 \title{Distance Conversion}
 \usage{
-convert.distance(x, from = c("nm", "km", "mi"), to = c("km", "nm",
-  "mi"))
+convert.distance(x, from = c("nm", "km", "mi"), to = c("km", "nm", "mi"))
 }
 \arguments{
 \item{x}{numeric. The distance to be converted.}

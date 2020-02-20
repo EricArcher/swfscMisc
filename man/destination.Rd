@@ -4,9 +4,16 @@
 \alias{destination}
 \title{Destination on Sphere or Ellipsoid}
 \usage{
-destination(lat, lon, brng, distance, units = c("nm", "km", "mi"),
-  ellipsoid = datum(), radius = convert.distance(6371, "km", "nm"),
-  type = c("ellipsoid", "sphere", "vincenty"))
+destination(
+  lat,
+  lon,
+  brng,
+  distance,
+  units = c("nm", "km", "mi"),
+  ellipsoid = datum(),
+  radius = convert.distance(6371, "km", "nm"),
+  type = c("ellipsoid", "sphere", "vincenty")
+)
 }
 \arguments{
 \item{lat, lon}{numeric. The latitude and longitude of the coordinate in decimal degrees.}

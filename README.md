@@ -90,12 +90,12 @@ devtools::install_github('ericarcher/swfscMisc')
     * which.nearest
     * zero.pad
 
-## version 1.3 (devel)
+## version 1.3 (on CRAN)
 
 * fixed plotAssignments to use facets and removed grids and space around panels
 * added setupClusters
 
-## version 1.2 (on CRAN)
+## version 1.2
 
 * Added rounding functions for data.frames.
 * Removed NEWS.md - changelog moved to README.md

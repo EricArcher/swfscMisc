@@ -60,6 +60,7 @@ devtools::install_github('ericarcher/swfscMisc')
   
 * Plotting functions:
     * braces
+    * catSpatInterp Categorical Spatial Interpolation
     * color.name
     * lab.wid
     * row.col.page.fit
@@ -89,6 +90,10 @@ devtools::install_github('ericarcher/swfscMisc')
     * setupClusters
     * which.nearest
     * zero.pad
+
+## version 1.4 (devel)
+
+* added catSpatInterp for Categorical Spatial Interpolation (based on code by Timo Grossenbacher)
 
 ## version 1.3 (on CRAN)
 

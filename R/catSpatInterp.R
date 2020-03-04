@@ -21,7 +21,8 @@
 #'   Categorical Spatial Interpolation by Timo Grossenbacher
 #'   \url{https://timogrossenbacher.ch/2018/03/categorical-spatial-interpolation-with-r/}
 #' 
-#' @examples \dontrun{
+#' @examples 
+#' \dontrun{
 #' iris.mds <- stats::cmdscale(dist(iris[, 1:4]), k = 2)
 #' mds.df <- setNames(
 #'   cbind(iris.mds, data.frame(iris$Species)),

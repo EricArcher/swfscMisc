@@ -21,7 +21,8 @@
 #'   Categorical Spatial Interpolation by Timo Grossenbacher
 #'   \url{https://timogrossenbacher.ch/2018/03/categorical-spatial-interpolation-with-r/}
 #' 
-#' @examples \dontrun{
+#' @examples 
+#' \dontrun{
 #' iris.mds <- stats::cmdscale(dist(iris[, 1:4]), k = 2)
 #' mds.df <- setNames(
 #'   cbind(iris.mds, data.frame(iris$Species)),
@@ -34,28 +35,29 @@
 #'   num.cores = 5, num.batches = NULL
 #' )
 #' 
-#' ggplot2::ggplot(result$hull.poly, ggplot2::aes(dim1, dim2)) +
-#'   ggplot2::geom_raster(
-#'     ggplot2::aes(fill = Species, alpha = prob), 
+#' library(ggplot2)
+#' ggplot(result$hull.poly, aes(dim1, dim2)) +
+#'   geom_raster(
+#'     aes(fill = Species, alpha = prob), 
 #'     data = result$raster
 #'   ) +
-#'   ggplot2::geom_polygon(data = result$hull.poly, fill = NA, col = "black") +
-#'   ggplot2::geom_hline(yintercept = 0, col = "white") +
-#'   ggplot2::geom_vline(xintercept = 0, col = "white") +
-#'   ggplot2::geom_point(
-#'     ggplot2::aes(fill = Species), 
+#'   geom_polygon(data = result$hull.poly, fill = NA, col = "black") +
+#'   geom_hline(yintercept = 0, col = "white") +
+#'   geom_vline(xintercept = 0, col = "white") +
+#'   geom_point(
+#'     aes(fill = Species), 
 #'     data = mds.df, 
 #'     col = "black", 
 #'     shape = 21, 
 #'     size = 4
 #'   ) + 
-#'   ggplot2::theme(
-#'     axis.ticks = ggplot2::element_blank(),
-#'     axis.text = ggplot2::element_blank(),
-#'     axis.title = ggplot2::element_blank(),
+#'   theme(
+#'     axis.ticks = element_blank(),
+#'     axis.text = element_blank(),
+#'     axis.title = element_blank(),
 #'     legend.position = "top",
-#'     panel.grid = ggplot2::element_blank(),
-#'     panel.background = ggplot2::element_blank()
+#'     panel.grid = element_blank(),
+#'     panel.background = element_blank()
 #'   )
 #' }
 #' 

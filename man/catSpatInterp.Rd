@@ -41,6 +41,47 @@ Create a raster of probability of categorical values
   interpolated across a 2-dimensional space given a set of points where 
   each is assigned to one of several classes.
 }
+\examples{
+\dontrun{
+iris.mds <- stats::cmdscale(dist(iris[, 1:4]), k = 2)
+mds.df <- setNames(
+  cbind(iris.mds, data.frame(iris$Species)),
+  c("dim1", "dim2", "Species")
+)
+
+result <- catSpatInterp(
+  mds.df, x.col = "dim1", y.col = "dim2", group.col = "Species", 
+  num.grid = 300, knn = 20, hull.buffer = 0.05,
+  num.cores = 5, num.batches = NULL
+)
+
+library(ggplot2)
+ggplot(result$hull.poly, aes(dim1, dim2)) +
+  geom_raster(
+    aes(fill = Species, alpha = prob), 
+    data = result$raster
+  ) +
+  geom_polygon(data = result$hull.poly, fill = NA, col = "black") +
+  geom_hline(yintercept = 0, col = "white") +
+  geom_vline(xintercept = 0, col = "white") +
+  geom_point(
+    aes(fill = Species), 
+    data = mds.df, 
+    col = "black", 
+    shape = 21, 
+    size = 4
+  ) + 
+  theme(
+    axis.ticks = element_blank(),
+    axis.text = element_blank(),
+    axis.title = element_blank(),
+    legend.position = "top",
+    panel.grid = element_blank(),
+    panel.background = element_blank()
+  )
+}
+
+}
 \references{
 Adapted from code originally presented in a blog post on 
   Categorical Spatial Interpolation by Timo Grossenbacher

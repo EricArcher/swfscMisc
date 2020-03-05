@@ -56,7 +56,7 @@ result <- catSpatInterp(
 )
 
 library(ggplot2)
-ggplot(result$hull.poly, aes(dim1, dim2)) +
+ggplot(aes(dim1, dim2)) +
   geom_raster(
     aes(fill = Species, alpha = prob), 
     data = result$raster

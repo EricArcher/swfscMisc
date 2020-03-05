@@ -36,7 +36,7 @@
 #' )
 #' 
 #' library(ggplot2)
-#' ggplot(result$hull.poly, aes(dim1, dim2)) +
+#' ggplot(aes(dim1, dim2)) +
 #'   geom_raster(
 #'     aes(fill = Species, alpha = prob), 
 #'     data = result$raster
@@ -76,6 +76,7 @@ catSpatInterp <- function(data, x.col = "x", y.col = "y", group.col = "group",
   
   # create data frame of points
   df <- as.data.frame(data[, c(x.col, y.col, group.col)])
+  df <- df[stats::complete.cases(df), ]
   df$group <- as.character(df[[group.col]])
   if(group.col != "group") df[[group.col]] <- NULL
   

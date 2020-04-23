@@ -36,7 +36,7 @@
 #' )
 #' 
 #' library(ggplot2)
-#' ggplot(aes(dim1, dim2)) +
+#' ggplot(mapping = aes(dim1, dim2)) +
 #'   geom_raster(
 #'     aes(fill = Species, alpha = prob), 
 #'     data = result$raster
@@ -125,7 +125,7 @@ catSpatInterp <- function(data, x.col = "x", y.col = "y", group.col = "group",
   raster <- tryCatch({
     if(is.null(cl)) { # Don't parallelize if num.cores == 1
       .computeGrid(hull.grid, train.df, knn)
-    } else { # Parallel random forest
+    } else { 
       parallel::clusterEvalQ(cl, require(swfscMisc))
       parallel::clusterExport(cl, c("hull.grid", "train.df", "knn"), environment())
       n <- length(hull.grid)

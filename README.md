@@ -94,6 +94,8 @@ devtools::install_github('ericarcher/swfscMisc')
 ## version 1.4 (devel)
 
 * added catSpatInterp for Categorical Spatial Interpolation (based on code by Timo Grossenbacher)
+* begin deprecation of das.* functions. to be removed in v1.5.
+* change `destination()` to accept vectors and return a matrix.
 
 ## version 1.3 (on CRAN)
 

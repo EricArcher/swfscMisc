@@ -58,7 +58,7 @@ destination <- function(lat, lon, brng, distance, units = c("nm", "km", "mi"),
     )
   )))
   
-  if(nrow(result) == 1) result[1, ]
+  if(nrow(result) == 1) result[1, ] else result
 }
   
 .sphere <- function(lat, lon, brng, distance, radius) {

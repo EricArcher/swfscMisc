@@ -19,7 +19,7 @@
 #' Ellipsoid code adapted from JavaScript by Larry Bogan 
 #' \url{http://adsabs.harvard.edu/full/2000JRASC..94...48B}.\cr
 #' Vincenty code adapted from JavaScript by Chris Veness 
-#' \url{http://www.movable-type.co.uk/scripts/latlong-vincenty-direct.html}
+#' \url{http://www.movable-type.co.uk/scripts/latlong-vincenty.html#direct}
 #' Vincenty, T. 1975.  Direct and inverse solutions of geodesics on the ellipsoid with 
 #' application of nested equations. Survey Review 22(176):88-93 
 #' \url{http://www.ngs.noaa.gov/PUBS_LIB/inverse.pdf}.

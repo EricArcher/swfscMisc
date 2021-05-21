@@ -3,7 +3,6 @@
 [![CRAN last week downloads](http://cranlogs.r-pkg.org/badges/last-week/swfscMisc?color=red)](https://cran.r-project.org/package=swfscMisc)
 [![CRAN last month downloads](http://cranlogs.r-pkg.org/badges/swfscMisc?color=red)](https://cran.r-project.org/package=swfscMisc)
 [![CRAN total downloads](http://cranlogs.r-pkg.org/badges/grand-total/swfscMisc?color=red)](https://cran.r-project.org/package=swfscMisc)  
-[![Travis-CI Build Status](https://travis-ci.org/EricArcher/swfscMisc.svg?branch=master)](https://travis-ci.org/EricArcher/swfscMisc)
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/EricArcher/swfscMisc?branch=master&svg=true)](https://ci.appveyor.com/project/EricArcher/swfscMisc)
 
 # swfscMisc

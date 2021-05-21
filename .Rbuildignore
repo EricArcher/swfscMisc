@@ -7,5 +7,4 @@
 ^NEWS\.md$
 tar.gz$
 .gitignore
-.travis.yml
 ^appveyor\.yml$

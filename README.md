@@ -2,7 +2,8 @@
 [![CRAN last day downloads](http://cranlogs.r-pkg.org/badges/last-day/swfscMisc?color=red)](https://cran.r-project.org/package=swfscMisc)
 [![CRAN last week downloads](http://cranlogs.r-pkg.org/badges/last-week/swfscMisc?color=red)](https://cran.r-project.org/package=swfscMisc)
 [![CRAN last month downloads](http://cranlogs.r-pkg.org/badges/swfscMisc?color=red)](https://cran.r-project.org/package=swfscMisc)
-[![CRAN total downloads](http://cranlogs.r-pkg.org/badges/grand-total/swfscMisc?color=red)](https://cran.r-project.org/package=swfscMisc)  
+[![CRAN total downloads](http://cranlogs.r-pkg.org/badges/grand-total/swfscMisc?color=red)](https://cran.r-project.org/package=swfscMisc) 
+[![R-CMD-check](https://github.com/EricArcher/swfscMisc/workflows/R-CMD-check/badge.svg)](https://github.com/EricArcher/swfscMisc/actions)
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/EricArcher/swfscMisc?branch=master&svg=true)](https://ci.appveyor.com/project/EricArcher/swfscMisc)
 
 # swfscMisc
@@ -25,7 +26,7 @@ install.packages('swfscMisc')
 To install the latest version from GitHub:
 
 ```r
-# make sure you have Rtools installed
+# make sure you have devtools installed
 if (!require('devtools')) install.packages('devtools')
 # install from GitHub
 devtools::install_github('ericarcher/swfscMisc')

@@ -91,7 +91,11 @@ devtools::install_github('ericarcher/swfscMisc')
     * which.nearest
     * zero.pad
 
-## version 1.4 (devel)
+## version 1.5 (devel)
+
+* removed das.* functions
+
+## version 1.4 (on CRAN)
 
 * added catSpatInterp for Categorical Spatial Interpolation (based on code by Timo Grossenbacher)
 * begin deprecation of das.* functions. to be removed in v1.5.
@@ -99,7 +103,7 @@ devtools::install_github('ericarcher/swfscMisc')
 * fixed `plotAssignments()` to not change class names.
 * updated spatstat import
 
-## version 1.3 (on CRAN)
+## version 1.3
 
 * fixed plotAssignments to use facets and removed grids and space around panels
 * added setupClusters

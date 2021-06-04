@@ -68,12 +68,11 @@ devtools::install_github('ericarcher/swfscMisc')
     * copy.tri
     * crossing.point
     * diversity
-    * fisher.method.p
+    * fisher.p
     * geometric.mean
     * harmonic.mean
     * isBetween
     * na.count
-    * normalize
     * odds conversion (odds, invOdds, logOdds, invLogOdds)
     * one.arg
     * plotAssignments
@@ -83,6 +82,10 @@ devtools::install_github('ericarcher/swfscMisc')
     * setupClusters
     * which.nearest
     * zero.pad
+
+## version 1.6 (devel)
+
+
 
 ## version 1.5 (on CRAN)
 

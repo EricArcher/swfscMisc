@@ -68,6 +68,7 @@ devtools::install_github('ericarcher/swfscMisc')
     * copy.tri
     * crossing.point
     * diversity
+    * distSmry
     * fisher.p
     * geometric.mean
     * harmonic.mean
@@ -85,7 +86,9 @@ devtools::install_github('ericarcher/swfscMisc')
 
 ## version 1.6 (devel)
 
-
+* reset setupClusters to choose correct function for OS
+* added `perpDist()` and `perpPt()`
+* added `distSmry()`
 
 ## version 1.5 (on CRAN)
 

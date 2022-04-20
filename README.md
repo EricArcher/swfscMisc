@@ -81,14 +81,17 @@ devtools::install_github('ericarcher/swfscMisc')
     * ceiling, floor, trunc, round (.data.frame)
     * uniform.test
     * setupClusters
+    * sn.params
     * which.nearest
     * zero.pad
+    
 
 ## version 1.6 (devel)
 
 * reset setupClusters to choose correct function for OS
 * added `perpDist()` and `perpPt()`
 * added `distSmry()`
+* added `sn.params` functions for computing skew normal parameters and moments
 
 ## version 1.5 (on CRAN)
 

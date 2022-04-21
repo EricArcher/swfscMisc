@@ -19,6 +19,8 @@ distSmry <- function(x, p = 0.95, dens.n = 10000) {
   if(!isBetween(p, 0, 100, include.ends = TRUE)) {
     stop("'p' must be between 0 and 100.")
   }
+  n <- length(x)
+  if(dens.n <= n) stop("'dens.n' must be > length(x).")
   
   if(p > 1) p <- p / 100
   lci <- (1 - p) / 2
@@ -29,7 +31,7 @@ distSmry <- function(x, p = 0.95, dens.n = 10000) {
   dens.x <- stats::density(x, n = dens.n)
   
   c(
-    n = length(x),
+    n = n,
     num.NA = num.NA,
     mean = mean(x),
     median = median(x),

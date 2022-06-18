@@ -89,6 +89,7 @@ devtools::install_github('ericarcher/swfscMisc')
     
 ### version 1.6.5 (devel)
 
+* added ability to use `modeest::mlv()` to estimate mode in `distSmry()` 
 
 ### version 1.6 (on CRAN)
 

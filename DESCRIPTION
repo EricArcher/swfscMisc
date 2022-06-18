@@ -5,7 +5,7 @@ Description: Collection of conversion, analytical, geodesic, mapping, and
     plotting functions. Used to support packages and code written by
     researchers at the Southwest Fisheries Science Center of the National
     Oceanic and Atmospheric Administration.
-Version: 1.6
+Version: 1.6.5
 Authors@R: c(
   EA = person("Eric", "Archer", email = "eric.archer@noaa.gov", role = c("aut", "cre")))
 URL: https://github.com/EricArcher/swfscMisc
@@ -20,17 +20,16 @@ Imports:
     ggrepel,
     HDInterval,
     kknn,
-    mapdata,
     magrittr,
+    modeest,
     tibble,
     maps,
     rlang,
     sf,
     spatstat.geom,
     stats,
-    tidyr,
-    utils
+    tidyr
 LazyData: TRUE
 License: GPL (>= 2)
 Encoding: UTF-8
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.0

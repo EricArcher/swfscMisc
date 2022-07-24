@@ -90,6 +90,7 @@ devtools::install_github('ericarcher/swfscMisc')
 ### version 1.6.5 (devel)
 
 * added ability to use `modeest::mlv()` to estimate mode in `distSmry()` 
+* fixed `pVal()` to handle NA and NaN values correctly
 
 ### version 1.6 (on CRAN)
 

@@ -18,5 +18,10 @@
 #' @export
 #' 
 pVal <- function(obs, null.dist) {
+  obs <- as.vector(obs)
+  if(length(obs) != 1) stop("'obs' must be a single value.")
+  null.dist <- as.vector(null.dist)
+  to.delete <- is.nan(obs) | is.nan(null.dist) | is.na(obs) | is.na(null.dist)
+  null.dist <- null.dist[!to.delete]
   (sum(null.dist >= obs) + 1) / (length(null.dist) + 1)
 }

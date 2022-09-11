@@ -67,7 +67,6 @@ devtools::install_github('ericarcher/swfscMisc')
     * central.quantile
     * copy.tri
     * crossing.point
-    * diversity
     * distSmry
     * fisher.p
     * geometric.mean
@@ -91,6 +90,7 @@ devtools::install_github('ericarcher/swfscMisc')
 
 * added ability to use `modeest::mlv()` to estimate mode in `distSmry()` 
 * fixed `pVal()` to handle NA and NaN values correctly
+* deprecating `diversity()`. New function in `sprex` package.
 
 ### version 1.6 (on CRAN)
 

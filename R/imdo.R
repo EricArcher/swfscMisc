@@ -55,12 +55,12 @@ imdo <- function(x, groups = NULL, plot = TRUE) {
   
   opt.smry <- cbind(opt.smry, intersectingPoint(pts, p1, p2))
   rownames(opt.smry) <- NULL
-  lower.left <- opt.smry$n.vars >= opt.smry$intersect.x &
-    opt.smry$n.ids >= opt.smry$intersect.y
+  lower.left <- opt.smry$n.vars < opt.smry$intersect.x &
+    opt.smry$n.ids < opt.smry$intersect.y
   opt.smry$distance[lower.left] <- -opt.smry$distance[lower.left]
-  opt.smry$D.opt <- opt.smry$distance == max(opt.smry$distance) &
-    !opt.smry$iter %in% c(1, nrow(opt.smry))
-  D.opt <- which(opt.smry$D.opt)
+  opt.smry$distance[c(1, nrow(opt.smry))] <- NA
+  opt.smry$D.opt <- opt.smry$distance == max(opt.smry$distance, na.rm = TRUE) 
+  D.opt <- which(opt.smry$D.opt)[1]
   
   if(plot) print(imdoPlot(opt.smry))
   list(
@@ -200,7 +200,7 @@ imdoPlot <- function(opt.smry, equal.axes = FALSE) {
   id.grp.to.include <- id.grp.smry$grp[1]
   
   # identify which variable groups will be excluded and update variables to include
-  var.grps.to.exclude <- names(which(id.var.grp.mat[id.grp.to.include, ]))
+  var.grps.to.exclude <- colnames(id.var.grp.mat)[id.var.grp.mat[id.grp.to.include, ]]
   vars.to.include <- setdiff(vars, unlist(var.grp.list[var.grps.to.exclude]))
   
   # create complete matrix for this iteration

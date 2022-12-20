@@ -32,6 +32,7 @@ imdo <- function(x, groups = NULL, plot = TRUE) {
   } else if(length(union(rownames(x), names(groups))) != nrow(x)) {
     stop("all rownames in 'x' and names in 'groups' must be the same")
   }
+  if(any(is.na(groups))) stop("'groups' cannot have NA values")
   if(!is.factor(groups)) groups <- factor(groups)
   
   iter.smry <- list()

@@ -13,8 +13,6 @@ BugReports: https://github.com/EricArcher/swfscMisc/issues
 Depends:
     R (>= 4.0.0)
 Imports:
-    graphics,
-    grDevices,
     dplyr,
     ggplot2,
     ggrepel,
@@ -23,7 +21,6 @@ Imports:
     magrittr,
     modeest,
     tibble,
-    maps,
     rlang,
     sf,
     spatstat.geom,

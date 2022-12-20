@@ -88,6 +88,9 @@ devtools::install_github('ericarcher/swfscMisc')
     
 ### version 1.6.5 (devel)
 
+* removed `sample.maps()`
+* added `imdo()`
+* added `intersectingPoint()`
 * added ability to use `modeest::mlv()` to estimate mode in `distSmry()` 
 * fixed `pVal()` to handle NA and NaN values correctly
 * deprecating `diversity()`. New function in `sprex` package.

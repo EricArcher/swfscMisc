@@ -41,14 +41,11 @@ imdo <- function(x, groups = NULL, plot = TRUE) {
     iter.result <- .imdoIteration(x, vars, groups)
     if(is.null(iter.result)) break
     iter.smry <- c(iter.smry, list(iter.result))
-    vars <- iter.result$vars.to.include
+    vars <- iter.result$vars
   }
   
   opt.smry <- do.call(rbind, lapply(iter.smry, function(smry) {
-    data.frame(
-      n.vars = length(smry$vars.to.include),
-      n.ids = length(smry$ids.to.include)
-    )
+    data.frame(n.vars = length(smry$vars), n.ids = length(smry$ids))
   }))
   opt.smry$iter <- 1:nrow(opt.smry)
   
@@ -58,19 +55,19 @@ imdo <- function(x, groups = NULL, plot = TRUE) {
   
   opt.smry <- cbind(opt.smry, intersectingPoint(pts, p1, p2))
   rownames(opt.smry) <- NULL
-  upper.right <- opt.smry$n.vars >= opt.smry$intersect.x &
+  lower.left <- opt.smry$n.vars >= opt.smry$intersect.x &
     opt.smry$n.ids >= opt.smry$intersect.y
-  opt.smry$D.opt <- opt.smry$distance == max(opt.smry$distance[upper.right]) 
+  opt.smry$distance[lower.left] <- -opt.smry$distance[lower.left]
+  opt.smry$D.opt <- opt.smry$distance == max(opt.smry$distance) &
+    !opt.smry$iter %in% c(1, nrow(opt.smry))
   D.opt <- which(opt.smry$D.opt)
-  opt.ids <- iter.smry[[D.opt]]$ids.to.include
-  opt.vars <- iter.smry[[D.opt]]$vars.to.include
   
   if(plot) print(imdoPlot(opt.smry))
   list(
     iter.smry = iter.smry, 
     D.opt = D.opt, 
     opt.smry = opt.smry,
-    opt.mat = orig.x[opt.ids, opt.vars]
+    opt.mat = orig.x[iter.smry[[D.opt]]$ids, iter.smry[[D.opt]]$vars]
   )
 }
 
@@ -140,17 +137,17 @@ imdoPlot <- function(opt.smry, equal.axes = FALSE) {
   rownames(id.var.grp.mat) <- id.grp[!duplicated(id.grp)]
   
   # correlations of all variables
-  var.cor <- if(is.numeric(x)) {
-    stats::cor(x[, vars, drop = FALSE], use = "pairwise.complete.obs")
-  } else {
-    matrix(1, nrow = ncol(x), ncol = ncol(x), dimnames = list(vars, vars))
-  }
-  diag(var.cor) <- NA
+  # var.cor <- if(is.numeric(x)) {
+  #   stats::cor(x[, vars, drop = FALSE], use = "pairwise.complete.obs")
+  # } else {
+  #   matrix(1, nrow = ncol(x), ncol = ncol(x), dimnames = list(vars, vars))
+  # }
+  # diag(var.cor) <- NA
   
   # compute the average of the maximum correlation coefficient
-  meanMaxCor <- function(i, var.cor) {
-    mean(apply(var.cor[i, , drop = FALSE], 1, max, na.rm = TRUE))
-  }
+  # meanMaxCor <- function(i, var.cor) {
+  #   mean(apply(var.cor[i, , drop = FALSE], 1, max, na.rm = TRUE))
+  # }
   
   # summarize id groups
   id.grp.smry <- sapply(unique(id.grp), function(grp) {
@@ -162,8 +159,8 @@ imdoPlot <- function(opt.smry, equal.axes = FALSE) {
       num.ids = length(ids),
       num.vars = length(x.vars),
       group.freq,
-      ids.per.var = length(ids) / length(x.vars),
-      mean.max.cor = meanMaxCor(x.vars, var.cor)
+      ids.per.var = length(ids) / length(x.vars)
+      #mean.max.cor = meanMaxCor(x.vars, var.cor)
     )))
     smry$grp <- grp
     smry
@@ -210,18 +207,5 @@ imdoPlot <- function(opt.smry, equal.axes = FALSE) {
   iter.x <- x[, vars.to.include, drop = FALSE]
   iter.x <- iter.x[stats::complete.cases(iter.x), , drop = FALSE]
   
-  list(
-    ids.to.include = rownames(iter.x),
-    vars.to.include = vars.to.include,
-    iter.missing.smry = list(
-      miss.mat = miss.mat,
-      var.grp = var.grp,
-      var.grp.list = var.grp.list,
-      var.grp.mat = var.grp.mat,
-      id.grp = id.grp,
-      id.grp.list = id.grp.list,
-      id.grp.smry = id.grp.smry,
-      id.var.grp.mat = id.var.grp.mat
-    )
-  )
+  list(ids = rownames(iter.x), vars = vars.to.include)
 }

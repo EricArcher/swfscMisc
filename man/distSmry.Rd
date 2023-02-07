@@ -4,19 +4,13 @@
 \alias{distSmry}
 \title{Distribution summary}
 \usage{
-distSmry(x, p = 0.95, dens.n = 10000, use.mlv = FALSE, ...)
+distSmry(x, p = 0.95, ...)
 }
 \arguments{
 \item{x}{vector of numerical values.}
 
 \item{p}{percent of distribution to summarized by quantile interval (ci) and 
 highest posterior density interval (hdi).}
-
-\item{dens.n}{number of points used to estimate the mode from the fitted 
-density (see \code{\link[stats]{density}}).}
-
-\item{use.mlv}{use the \code{\link[modeest]{mlv}} function to estimate the 
-mode. If set to \code{TRUE}, the \code{dens.n} argument is ignored.}
 
 \item{...}{arguments passed to \code{\link[modeest]{mlv}} to estimate the 
 mode if \code{use.mlv} is \code{TRUE}.}

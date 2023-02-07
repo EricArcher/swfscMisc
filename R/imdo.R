@@ -62,7 +62,7 @@ imdo <- function(x, groups = NULL, plot = TRUE) {
   opt.smry$D.opt <- opt.smry$distance == max(opt.smry$distance, na.rm = TRUE) 
   D.opt <- which(opt.smry$D.opt)[1]
   
-  if(plot) print(imdoPlot(opt.smry))
+  if(plot) imdoPlot(opt.smry)
   list(
     iter.smry = iter.smry, 
     D.opt = D.opt, 

@@ -4,10 +4,6 @@
 #' @param x vector of numerical values.
 #' @param p percent of distribution to summarized by quantile interval (ci) and 
 #'   highest posterior density interval (hdi).
-#' @param dens.n number of points used to estimate the mode from the fitted 
-#'   density (see \code{\link[stats]{density}}).
-#' @param use.mlv use the \code{\link[modeest]{mlv}} function to estimate the 
-#'   mode. If set to \code{TRUE}, the \code{dens.n} argument is ignored.
 #' @param ... arguments passed to \code{\link[modeest]{mlv}} to estimate the 
 #'   mode if \code{use.mlv} is \code{TRUE}.
 #' 
@@ -15,7 +11,7 @@
 #' 
 #' @export
 #' 
-distSmry <- function(x, p = 0.95, dens.n = 10000, use.mlv = FALSE, ...) {
+distSmry <- function(x, p = 0.95, ...) {
   x <- as.numeric(x)
   num.NA = sum(is.na(x))
   x <- stats::na.omit(x)
@@ -25,14 +21,6 @@ distSmry <- function(x, p = 0.95, dens.n = 10000, use.mlv = FALSE, ...) {
   }
   
   n <- length(x)
-  
-  x.mode <- if(!use.mlv) {
-    if(dens.n <= n) stop("'dens.n' must be > length(x).")
-    dens.x <- stats::density(x, n = dens.n)
-    dens.x$x[which.max(dens.x$y)]
-  } else {
-    modeest::mlv(x, ...)
-  }
   
   if(p > 1) p <- p / 100
   lci <- (1 - p) / 2
@@ -46,7 +34,7 @@ distSmry <- function(x, p = 0.95, dens.n = 10000, use.mlv = FALSE, ...) {
     num.NA = num.NA,
     mean = mean(x),
     median = median(x),
-    mode = x.mode,
+    mode = modeest::mlv(x, ...),
     min = min(x),
     max = max(x),
     sd = stats::sd(x),

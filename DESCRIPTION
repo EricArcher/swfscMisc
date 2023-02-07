@@ -13,15 +13,18 @@ BugReports: https://github.com/EricArcher/swfscMisc/issues
 Depends:
     R (>= 4.0.0)
 Imports:
+    abind,
     dplyr,
     ggplot2,
     ggrepel,
     HDInterval,
     kknn,
     magrittr,
+    methods,
     modeest,
     tibble,
     rlang,
+    runjags,
     sf,
     spatstat.geom,
     stats,

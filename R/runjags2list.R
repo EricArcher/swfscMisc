@@ -26,20 +26,17 @@ runjags2list <- function(post, collapse.chains = TRUE) {
     grep(paste0(p1, "|", p2), params, value = TRUE)
   }, simplify = FALSE)
   
+  post.comb <- runjags::combine.mcmc(post$mcmc, collapse.chains = F)
+  if(!is.list(post.comb)) post.comb <- list(post.comb)
+  
   sapply(names(p), function(x) {
     dim.nums <- gsub(x, "", p[[x]])
     dim.nums <- gsub("\\[|\\]", "", dim.nums)
     dim.nums <- do.call(rbind, strsplit(dim.nums, ","))
     dim.nums <- apply(dim.nums, 2, as.numeric)
     
-    post.p <- runjags::combine.mcmc(
-      post$mcmc, 
-      vars = x, 
-      collapse.chains = collapse.chains
-    )
-    if(!is.list(post.p)) post.p <- list(post.p)
-    
-    mat <- lapply(post.p, function(chain) {
+    mat <- lapply(post.comb, function(chain) {
+      chain <- chain[, p[[x]]]
       if(length(dim.nums) == 0) {
         stats::setNames(as.vector(chain), rownames(chain))
       } else {

@@ -47,15 +47,12 @@ devtools::install_github('ericarcher/swfscMisc')
     * convert.angle
     * convert.distance
 
-* Mapping functions:
-    * lat.lon.axes
-    * sample.map
-  
 * Plotting functions:
     * braces
     * catSpatInterp Categorical Spatial Interpolation
     * color.name
     * lab.wid
+    * lat.lon.axes
     * row.col.page.fit
     * scatterdens
     * scatterhist
@@ -86,17 +83,21 @@ devtools::install_github('ericarcher/swfscMisc')
     
 ## Changelog
     
-### version 1.6.5 (devel)
+### version 1.6.6 (devel)
 
-* removed `sample.maps()`
+    
+### version 1.6.5 (on CRAN)
+
+* removed `sample.map()`
 * added `imdo()`
 * added `intersectingPoint()`
 * added ability to use `modeest::mlv()` to estimate mode in `distSmry()` 
 * fixed `pVal()` to handle NA and NaN values correctly
 * deprecating `diversity()`. New function in `sprex` package.
 * added `runjags2list()` to format posterior samples from `runjags::run.jags()`.
+* corrected package name alias documentation for CRAN
 
-### version 1.6 (on CRAN)
+### version 1.6
 
 * reset setupClusters to choose correct function for OS
 * added `perpDist()` and `perpPt()`

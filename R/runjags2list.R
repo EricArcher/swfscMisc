@@ -48,7 +48,7 @@ runjags2list <- function(post, collapse.chains = TRUE) {
     })
     
     if(length(dim.nums) == 0) {
-      if(collapse.chains) mat[[1]] else do.call(cbind, mat) 
+      if(collapse.chains) unlist(mat) else do.call(cbind, mat) 
     } else {
       iter.dim <- ncol(dim.nums) + if(collapse.chains) 1 else 2
       do.call(abind::abind, c(mat, list(along = iter.dim)))

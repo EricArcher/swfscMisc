@@ -25,6 +25,7 @@ runjags2list <- function(post, collapse.chains = TRUE) {
     p2 <- paste0("^", p, "\\[")
     grep(paste0(p1, "|", p2), params, value = TRUE)
   }, simplify = FALSE)
+  p <- p[sapply(p, length) > 0]
   
   post.comb <- runjags::combine.mcmc(post$mcmc, collapse.chains = F)
   if(!is.list(post.comb)) post.comb <- list(post.comb)

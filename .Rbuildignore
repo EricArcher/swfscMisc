@@ -9,3 +9,5 @@ tar.gz$
 .gitignore
 ^appveyor\.yml$
 ^\.github$
+^revdep$
+.DS_Store

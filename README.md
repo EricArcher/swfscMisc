@@ -85,6 +85,7 @@ devtools::install_github('ericarcher/swfscMisc')
     
 ### version 1.6.6 (devel)
 
+* fixed bug in runjags2list if variable in monitor vector wasn't in model
     
 ### version 1.6.5 (on CRAN)
 

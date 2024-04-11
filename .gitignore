@@ -1,9 +1,9 @@
 .Rproj.user
 .Rhistory
 .RData
-.DS_Store*
+^.DS_Store*
 swfscMisc.Rcheck/
-.DS_Store
 DASALL.ALL
 .Rapp.history
 devel/*
+/revdep

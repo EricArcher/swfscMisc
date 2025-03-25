@@ -7,3 +7,4 @@ DASALL.ALL
 .Rapp.history
 devel/*
 /revdep
+.DS_Store

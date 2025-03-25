@@ -11,7 +11,7 @@ Authors@R: c(
 URL: https://github.com/EricArcher/swfscMisc
 BugReports: https://github.com/EricArcher/swfscMisc/issues
 Depends:
-    R (>= 4.0.0)
+    R (>= 4.3.0)
 Imports:
     abind,
     dplyr,
@@ -24,11 +24,14 @@ Imports:
     modeest,
     tibble,
     rlang,
-    runjags,
     sf,
     spatstat.geom,
     stats,
     tidyr
+Suggests:
+    coda,
+    runjags,
+    rstan
 LazyData: TRUE
 License: GPL (>= 2)
 Encoding: UTF-8

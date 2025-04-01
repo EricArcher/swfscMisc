@@ -10,4 +10,5 @@ tar.gz$
 ^appveyor\.yml$
 ^\.github$
 ^revdep$
-.DS_Store
+^\.DS_Store$ 
+^CRAN-SUBMISSION$

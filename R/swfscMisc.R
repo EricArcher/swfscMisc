@@ -4,7 +4,6 @@
 #' 
 #' @aliases swfscMisc-package
 #' @name swfscMisc
-#' @importFrom magrittr %>%
 #' @importFrom rlang .data
 "_PACKAGE"
 

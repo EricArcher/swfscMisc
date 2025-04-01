@@ -12,7 +12,8 @@
 
 *swfscMisc* is a collection of utility functions used at the NOAA Southwest Fisheries 
 Science Center in La Jolla, CA. The package contains functions for geodesic 
-calculations, commonly used  mapping functions, plotting special symbols, and miscellaneous analytical and conversion functions.
+calculations, commonly used  mapping functions, plotting special symbols, 
+and miscellaneous analytical and conversion functions.
 
 ## Installation
 
@@ -54,40 +55,53 @@ devtools::install_github('ericarcher/swfscMisc')
     * lab.wid
     * lat.lon.axes
     * row.col.page.fit
+    * ggBiplot
     * scatterdens
     * scatterhist
     * sex.symbols
-  
+
+* Distribution functions:
+    * betaParams
+    * central.quantile
+    * distSmry
+    * fisher.p
+    * gammaParams
+    * pVal
+    * sn.params
+    * uniform.test
+
 * Miscellaneous functions:
     * affin.prop
+    * autoUnits
     * box.area
     * central.quantile
     * copy.tri
     * crossing.point
-    * distSmry
-    * fisher.p
     * geometric.mean
     * harmonic.mean
     * isBetween
+    * month2Season
+    * mcmc2list
     * na.count
     * odds conversion (odds, invOdds, logOdds, invLogOdds)
     * one.arg
     * plotAssignments
-    * pVal
     * ceiling, floor, trunc, round (.data.frame)
-    * uniform.test
+    * runjags2list
+    * stan2list
     * setupClusters
-    * sn.params
     * which.nearest
     * zero.pad
-    
+  
 ## Changelog
     
-### version 1.6.6 (devel)
+### version 1.6.6 (on CRAN)
 
-* fixed bug in runjags2list if variable in monitor vector wasn't in model
+* fixed bug in `runjags2list()` if variable in monitor vector wasn't in model
+* added `betaParams()` and `gammaParams()`
+* removed `diversity()` - now in `sprex` package
     
-### version 1.6.5 (on CRAN)
+### version 1.6.5
 
 * removed `sample.map()`
 * added `imdo()`

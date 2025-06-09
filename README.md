@@ -36,7 +36,7 @@ devtools::install_github('ericarcher/swfscMisc')
 
 * submit suggestions and bug-reports: <https://github.com/ericarcher/swfscMisc/issues>
 * send a pull request: <https://github.com/ericarcher/swfscMisc/>
-* e-mail: <eric.archer@noaa.gov>
+* e-mail: <eric.ivan.archer@gmail.com>
 
 ## Current functions
 
@@ -95,7 +95,11 @@ devtools::install_github('ericarcher/swfscMisc')
   
 ## Changelog
     
-### version 1.6.6 (on CRAN)
+### version 1.7 (on CRAN)
+
+* changed maintainer email to eric.ivan.archer@gmail.com
+    
+### version 1.6.6
 
 * fixed bug in `runjags2list()` if variable in monitor vector wasn't in model
 * added `betaParams()` and `gammaParams()`

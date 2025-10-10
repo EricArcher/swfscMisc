@@ -5,11 +5,7 @@ Description: Collection of conversion, analytical, geodesic, mapping, and
     plotting functions. Used to support packages and code written by
     researchers at the Southwest Fisheries Science Center of the National
     Oceanic and Atmospheric Administration.
-<<<<<<< HEAD
 Version: 1.7.5
-=======
-Version: 1.7
->>>>>>> 925f608b79187a6d826f3a1908edc15013526ca5
 Authors@R: c(
   EA = person("Eric", "Archer", email = "eric.ivan.archer@gmail.com", role = c("aut", "cre")))
 URL: https://github.com/EricArcher/swfscMisc

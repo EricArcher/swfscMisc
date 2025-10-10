@@ -67,15 +67,15 @@ plotAssignments <- function(
   
   if(is.null(ylab)) ylab <- "Assignment Probability"
   
-  p <- ggplot2::ggplot(df, ggplot2::aes_string("id", "prob")) +
+  p <- ggplot2::ggplot(df, ggplot2::aes(.data$id, .data$prob)) +
     switch(
       type,
       area = ggplot2::geom_area(
-        ggplot2::aes_string(fill = "pred"), 
+        ggplot2::aes(fill = .data$pred), 
         stat = "identity"
       ),
       bar = ggplot2::geom_bar(
-        ggplot2::aes_string(fill = "pred"), 
+        ggplot2::aes(fill = .data$pred), 
         stat = "identity"
       )
     ) +

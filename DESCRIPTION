@@ -5,9 +5,9 @@ Description: Collection of conversion, analytical, geodesic, mapping, and
     plotting functions. Used to support packages and code written by
     researchers at the Southwest Fisheries Science Center of the National
     Oceanic and Atmospheric Administration.
-Version: 1.6.6
+Version: 1.7.5
 Authors@R: c(
-  EA = person("Eric", "Archer", email = "eric.archer@noaa.gov", role = c("aut", "cre")))
+  EA = person("Eric", "Archer", email = "eric.ivan.archer@gmail.com", role = c("aut", "cre")))
 URL: https://github.com/EricArcher/swfscMisc
 BugReports: https://github.com/EricArcher/swfscMisc/issues
 Depends:
@@ -33,4 +33,4 @@ Suggests:
     rstan
 License: GPL (>= 2)
 Encoding: UTF-8
-RoxygenNote: 7.3.2
+RoxygenNote: 7.3.3

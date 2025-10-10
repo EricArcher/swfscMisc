@@ -4,28 +4,42 @@
 \alias{ggBiplot}
 \title{ggBiplot}
 \usage{
-ggBiplot(pca, x = 1, y = 2, mult.fac = 0.8, arrow.size = 1.5, label.size = 6)
+ggBiplot(
+  pca,
+  pcs = c(1, 2),
+  mult.fac = 0.8,
+  arrow.size = NULL,
+  label.size = 3,
+  plot = TRUE
+)
 }
 \arguments{
-\item{pca}{result from a call to \code{\link{princomp}}.}
+\item{pca}{result from a call to \code{\link{princomp}} or \code{\link{prcomp}}.}
 
-\item{x, y}{the number or column names of the components to plot.}
+\item{pcs}{a two element vector giving the number or column names of 
+the components to plot.}
 
-\item{mult.fac}{multiplier factor for lengths of arrows from \code{0:1}.}
+\item{mult.fac}{multiplier factor for positions of points relative to extent of
+plot (\code{0:1}).}
 
-\item{arrow.size}{thickness of arrow lines.}
+\item{arrow.size}{thickness of arrow lines. If \code{NULL} no arrows are shown.}
 
 \item{label.size}{size of labels.}
+
+\item{plot}{show the plot?}
 }
 \value{
 the ggplot2 object is invisibly returned.
 }
 \description{
-Plot a biplot of a Principal Components Analysis using ggplot2.
+Create a biplot of a Principal Components Analysis using ggplot2.
 }
 \examples{
-pc.cr <- princomp(USArrests, cor = TRUE)
-ggBiplot(pc.cr)
+pca.princomp <- princomp(USArrests, cor = TRUE)
+ggBiplot(pca.princomp)
+
+pca.prcomp <- prcomp(USArrests, cor = TRUE)
+ggBiplot(pca.prcomp)
 
 }
 \author{

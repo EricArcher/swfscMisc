@@ -20,7 +20,6 @@ Imports:
     HDInterval,
     kknn,
     methods,
-    modeest,
     tibble,
     rlang,
     sf,
@@ -33,4 +32,4 @@ Suggests:
     rstan
 License: GPL (>= 2)
 Encoding: UTF-8
-RoxygenNote: 7.3.3
+Config/roxygen2/version: 8.1.0

@@ -4,10 +4,11 @@
 #' @param x vector of numerical values.
 #' @param p percent of distribution to summarized by quantile interval (ci) and 
 #'   highest posterior density interval (hdi).
-#' @param ... arguments passed to \code{\link[modeest]{mlv}} to estimate the 
-#'   mode if \code{use.mlv} is \code{TRUE}.
+#' @param ... arguments passed on to \code{\link[stats]{density}} to 
+#'   estimate the mode.
 #' 
 #' @author Eric Archer \email{eric.archer@@noaa.gov}
+#' 
 #' 
 #' @export
 #' 
@@ -26,6 +27,7 @@ distSmry <- function(x, p = 0.95, ...) {
   lci <- (1 - p) / 2
   uci <- 1 - lci
   
+  dens <- stats::density(x, ...)
   quant.x <- unname(stats::quantile(x, p = c(lci, uci)))
   hdi.x <- unname(HDInterval::hdi(x, credMass = p))
   
@@ -34,7 +36,7 @@ distSmry <- function(x, p = 0.95, ...) {
     num.NA = num.NA,
     mean = mean(x),
     median = median(x),
-    mode = modeest::mlv(x, ...),
+    mode = dens$x[which.max(dens$y)],
     min = min(x),
     max = max(x),
     sd = stats::sd(x),

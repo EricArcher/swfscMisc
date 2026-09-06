@@ -8,3 +8,4 @@ DASALL.ALL
 devel/*
 /revdep
 .DS_Store
+.Rproj.user

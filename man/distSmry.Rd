@@ -12,8 +12,8 @@ distSmry(x, p = 0.95, ...)
 \item{p}{percent of distribution to summarized by quantile interval (ci) and 
 highest posterior density interval (hdi).}
 
-\item{...}{arguments passed to \code{\link[modeest]{mlv}} to estimate the 
-mode if \code{use.mlv} is \code{TRUE}.}
+\item{...}{arguments passed on to \code{\link[stats]{density}} to 
+estimate the mode.}
 }
 \description{
 Summarize a numerical distribution.

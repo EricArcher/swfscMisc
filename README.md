@@ -97,8 +97,9 @@ devtools::install_github('ericarcher/swfscMisc')
     
 ### version 1.7.5 (devel)
 
-* changed usage of ggplot2::aes_string() to ggplot2::aes()
-* updated ggBiplot to work with prcomp() output as well as princomp()
+* changed usage of `ggplot2::aes_string()` to `ggplot2::aes()`
+* updated ggBiplot to work with `prcomp()` output as well as `princomp()`
+* changed use of `modeest::mlv()` to `stats::density()` in `distSmry()` because `modeest` is getting archived on CRAN  
 
 ### version 1.7 (on CRAN)
 

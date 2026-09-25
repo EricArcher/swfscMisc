@@ -13,3 +13,4 @@ tar.gz$
 ^\.DS_Store$ 
 ^CRAN-SUBMISSION$
 ^cran-comments\.md$
+*.Rproj

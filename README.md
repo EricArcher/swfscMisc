@@ -95,13 +95,13 @@ devtools::install_github('ericarcher/swfscMisc')
   
 ## Changelog
     
-### version 1.7.6 (devel)
+### version 1.7.6 (on CRAN)
 
 * changed usage of `ggplot2::aes_string()` to `ggplot2::aes()`
 * updated ggBiplot to work with `prcomp()` output as well as `princomp()`
 * changed use of `modeest::mlv()` to `stats::density()` in `distSmry()` because `modeest` is getting archived on CRAN  
 
-### version 1.7 (on CRAN)
+### version 1.7
 
 * changed maintainer email to eric.ivan.archer@gmail.com
     
